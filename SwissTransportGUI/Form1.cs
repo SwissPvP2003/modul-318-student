@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SwissTransport;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SwissTransportGUI
 {
-    public partial class Form1 : Form
+    public partial class fStartGUI : Form
     {
-        public Form1()
+        public fStartGUI()
         {
             InitializeComponent();
+           
+        }
+
+        private void btnSearchConnetctions_Click(object sender, EventArgs e)
+        {
+            fSearchConnections searchConnections = new fSearchConnections();
+            searchConnections.ShowDialog();
+        }
+
+        private void btnShowStationboard_Click(object sender, EventArgs e)
+        {
+            fStationboard stationboard = new fStationboard();
+            stationboard.ShowDialog();
         }
     }
 }
