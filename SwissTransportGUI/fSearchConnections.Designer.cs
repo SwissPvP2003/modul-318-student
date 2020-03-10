@@ -43,8 +43,8 @@
             this.cDepartureStation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cArrivalTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cArrivalStation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cPlatform = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cDuration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cPlatform = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lbTitle
@@ -82,6 +82,7 @@
             this.cbStationFrom.Name = "cbStationFrom";
             this.cbStationFrom.Size = new System.Drawing.Size(383, 33);
             this.cbStationFrom.TabIndex = 6;
+            this.cbStationFrom.TextUpdate += new System.EventHandler(this.cbStationFrom_TextUpdate);
             // 
             // cbStationTo
             // 
@@ -90,6 +91,7 @@
             this.cbStationTo.Name = "cbStationTo";
             this.cbStationTo.Size = new System.Drawing.Size(383, 33);
             this.cbStationTo.TabIndex = 7;
+            this.cbStationTo.TextUpdate += new System.EventHandler(this.cbStationTo_TextUpdate);
             // 
             // dtpDate
             // 
@@ -147,7 +149,7 @@
             this.lvConnections.HideSelection = false;
             this.lvConnections.Location = new System.Drawing.Point(12, 442);
             this.lvConnections.Name = "lvConnections";
-            this.lvConnections.Size = new System.Drawing.Size(650, 575);
+            this.lvConnections.Size = new System.Drawing.Size(1412, 575);
             this.lvConnections.TabIndex = 12;
             this.lvConnections.UseCompatibleStateImageBehavior = false;
             this.lvConnections.View = System.Windows.Forms.View.Details;
@@ -177,21 +179,21 @@
             this.cArrivalStation.Text = "Arrival Station";
             this.cArrivalStation.Width = 100;
             // 
-            // cPlatform
-            // 
-            this.cPlatform.Text = "Platform";
-            this.cPlatform.Width = 100;
-            // 
             // cDuration
             // 
             this.cDuration.Text = "Duration";
             this.cDuration.Width = 100;
             // 
+            // cPlatform
+            // 
+            this.cPlatform.Text = "Platform";
+            this.cPlatform.Width = 100;
+            // 
             // fSearchConnections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 1029);
+            this.ClientSize = new System.Drawing.Size(1436, 1029);
             this.Controls.Add(this.lvConnections);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dtpTime);

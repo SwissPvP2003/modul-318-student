@@ -13,6 +13,8 @@ namespace SwissTransportGUI
 {
     public partial class fSearchConnections : Form
     {
+        readonly Transport transport = new Transport();
+
         public fSearchConnections()
         {
             InitializeComponent();
@@ -22,29 +24,62 @@ namespace SwissTransportGUI
         {
             lvConnections.Items.Clear();
 
-            Connections connections = getConnections(cbStationFrom.Text, cbStationTo.Text);
+            Connections connections = GetConnections(cbStationFrom.Text, cbStationTo.Text);
 
             foreach (Connection connection in connections.ConnectionList)
             {
-                lvConnections.Items.Add(GetListViewItem(connection));
+                lvConnections.Items.Add(ConvertToListViewItem(connection));
             }
         }
 
-        private Connections getConnections(string fromStation, string toStation)
+        private Connections GetConnections(string fromStation, string toStation)
         {
-            Transport transport = new Transport();
             Connections connections;
             connections = transport.GetConnections(fromStation, toStation);
             return connections;
         }
 
-        private ListViewItem GetListViewItem(Connection connection)
+        private ListViewItem ConvertToListViewItem(Connection connection)
         {
             string[] connections = {connection.From.Departure.ToString().Substring(0, 10), connection.From.Station.Name, connection.From.Departure.ToString().Substring(11, 5), connection.To.Station.Name, connection.To.Arrival.ToString().Substring(11, 5), connection.Duration.Substring(3, 5), connection.From.Platform};
             return new ListViewItem(connections);
         }
 
+        private StationBoardRoot GetStationboard()
+        {
+            StationBoardRoot stationBoardRoot;
+            stationBoardRoot = transport.GetStationBoard("Sursee", "8502007");
+            return stationBoardRoot;
+        }
 
+        private void cbStationFrom_TextUpdate(object sender, EventArgs e)
+        {
+            ClearStationsNames(cbStationFrom);
+            AddStationNames(cbStationFrom);
+        }
+        private void cbStationTo_TextUpdate(object sender, EventArgs e)
+        {
+            ClearStationsNames(cbStationTo);
+            AddStationNames(cbStationTo);
+        }
+
+        private void ClearStationsNames(ComboBox comboBox)
+        {
+            comboBox.Items.Clear();
+            comboBox.SelectionStart = comboBox.Text.Length;
+            comboBox.SelectionLength = 0;
+        }
+
+        private void AddStationNames(ComboBox comboBox)
+        {
+            comboBox.DroppedDown = true;
+            foreach (Station station in transport.GetStations(comboBox.Text).StationList)
+            {
+                if(station.Name != null)
+                    comboBox.Items.Add(station.Name);
+            }
+            
+        }
 
     }
 }
