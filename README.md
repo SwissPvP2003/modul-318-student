@@ -61,8 +61,10 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 <a name="usecases"/>
 
 ### Usecases
-| USE CASE | 1, START- & END-STATION SUCHEN  |
-| -----|--------------|
+
+#### START- & END-STATION SUCHEN
+| USE CASE |          |
+| ---------|----------|
 |BESCHREIBUNG|Damit der User sich keine Stationen merken muss kann er nach Stationen suchen. Die suche muss über eine Texteingabe erfolgen. Es werden auch schon Stationen angezeigt, wenn der Name noch nicht den ganzen Namen eingegeben hat.|
 |AKTEUR|SBB User|
 |AUSLÖSER|SBB User möchte, Namen der Station wissen und nicht selber auswendig lernen.|
@@ -70,22 +72,28 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 |ABLAUF| <ol><li>User öffnet Programm</li><li>User klickt entweder auf «Abfahrstafel» oder «Verbindungen anzeigen»</li><li>User gibt Namen von Station ein.</li><li>User klickt auf Suchen</li><li>User bekommt Resultat auch wenn er nicht den kompletten Namen eingegeben hat</li></ol> |
 |ERGEBNIS|Stationen werden trotzdem gefunden auch wenn der User nicht den Kompletten Namen eingegeben hat. z.B. Meierskappel wird zu Meierskappel Dorfplatz.|
 
-| USE CASE | 1, VERBINDUNGEN ANZEIGEN  |
-| -----|--------------|
+#### VERBINDUNGEN ANZEIGEN
+| USE CASE |          |
+| ---------|----------|
 |BESCHREIBUNG|Dem User werden die nächsten 5 Verbindungen zwischen der Start- und End-Station angezeigt|
 |AKTEUR|SBB User|
 |AUSLÖSER|SBB User möchte, die wissen was die besten Verbindungen zwischen den eingegebenen Stationen wissen.|
 |ABLAUF| <ol><li>User öffnet Programm</li><li>User klickt entweder auf «Verbindungen anzeigen»</li><li>User gibt Namen von Start- und Endstation ein.</li><li>User klickt auf Verbindungen anzeigen</li><li>User bekommt Liste mit den 5 nächsten Verbindungen zwischen den 2 Stationen angezeigt.</li></ol> |
 |ERGEBNIS|User bekommt Liste mit den 5 nächsten Verbindungen zwischen den 2 Stationen angezeigt.|
 
-| USE CASE | 1, ABFAHRTSTAFEL |
-| -----|--------------|
+#### ABFAHRTSTAFEL
+| USE CASE |          |
+| ---------|----------|
 |BESCHREIBUNG|Dem User werden alle Anschlussmöglichkeiten einer Station angezeigt. Es sollen alle Verbindungen, egal in welche Richtung, welche an dieser Station anhalten angezeigt werden|
 |AKTEUR|SBB User|
 |AUSLÖSER|SBB User möchte alle Verbindungen einer Station in alle Richtungen wissen.|
 |VOBEDINGUNGEN|Internetverbindung|
 |ABLAUF| <ol><li>User öffnet Programm</li><li>User klickt entweder auf «Abfahrstafel»</li><li>User gibt Namen von Startstation ein.</li><li>User klickt auf Abfahrstafel anzeigen</li><li>User bekommt Liste mit den nächsten Verbindungen die von der eingegeben Stationen ausgehen angezeigt.</li></ol> |
 |ERGEBNIS|User bekommt Liste mit den nächsten Verbindungen die von der eingegeben Stationen ausgehen angezeigt. Die Tafel funktioniert genauso wie die Tafel die an den Bahnhöfen stehen.|
+
+#### Bild
+
+![Use Case](/doc/UseCase.png)
 
 <a name="programmierrichtlinen"/>
 
