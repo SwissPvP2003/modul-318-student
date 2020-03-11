@@ -23,12 +23,14 @@ namespace SwissTransportGUI
         private void btnSearch_Click(object sender, EventArgs e)
         {
             lvConnections.Items.Clear();
-
-            StationBoardRoot StationBoardRoot = GetStationboard(cbStation.Text, string.Empty);
-
-            foreach (StationBoard stationBoard in StationBoardRoot.Entries)
+            if (cbStation.IsBoxFilled())
             {
-                lvConnections.Items.Add(ConvertToListViewItem(stationBoard));
+                StationBoardRoot StationBoardRoot = GetStationboard(cbStation.Text, string.Empty);
+
+                foreach (StationBoard stationBoard in StationBoardRoot.Entries)
+                {
+                    lvConnections.Items.Add(ConvertToListViewItem(stationBoard));
+                }
             }
         }
 
@@ -45,28 +47,10 @@ namespace SwissTransportGUI
             return new ListViewItem(stationboardInformations);
         }
 
-        private void ClearStationsNames(ComboBox comboBox)
+        private void dropDownComboBox1_TextUpdate(object sender, EventArgs e)
         {
-            comboBox.Items.Clear();
-            comboBox.SelectionStart = comboBox.Text.Length;
-            comboBox.SelectionLength = 0;
-        }
-
-        private void AddStationNames(ComboBox comboBox)
-        {
-            comboBox.DroppedDown = true;
-            foreach (Station station in transport.GetStations(comboBox.Text).StationList)
-            {
-                if (station.Name != null && station.Id != null)
-                    comboBox.Items.Add(station.Name);
-            }
-
-        }
-
-        private void cbStation_TextUpdate(object sender, EventArgs e)
-        {
-            ClearStationsNames(cbStation);
-            AddStationNames(cbStation);
+            cbStation.ClearStationsNames();
+            cbStation.AddStationNames(transport);
         }
     }
 }

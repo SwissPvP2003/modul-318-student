@@ -23,12 +23,13 @@ namespace SwissTransportGUI
         private void btnSearch_Click(object sender, EventArgs e)
         {
             lvConnections.Items.Clear();
-
-            Connections connections = GetConnections(cbStationFrom.Text, cbStationTo.Text, dtpDate.Text, dtpTime.Text);
-
-            foreach (Connection connection in connections.ConnectionList)
+            if(cbStationFrom.IsBoxFilled() && cbStationTo.IsBoxFilled())
             {
-                lvConnections.Items.Add(ConvertToListViewItem(connection));
+                Connections connections = GetConnections(cbStationFrom.Text, cbStationTo.Text, dtpDate.Text, dtpTime.Text);
+                foreach (Connection connection in connections.ConnectionList)
+                {
+                    lvConnections.Items.Add(ConvertToListViewItem(connection));
+                }
             }
         }
 
@@ -45,34 +46,32 @@ namespace SwissTransportGUI
             return new ListViewItem(connections);
         }
 
-        private void cbStationFrom_TextUpdate(object sender, EventArgs e)
+        private void dropDownComboBox1_TextUpdate(object sender, EventArgs e)
         {
-            ClearStationsNames(cbStationFrom);
-            AddStationNames(cbStationFrom);
-        }
-        private void cbStationTo_TextUpdate(object sender, EventArgs e)
-        {
-            ClearStationsNames(cbStationTo);
-            AddStationNames(cbStationTo);
-        }
-
-        private void ClearStationsNames(ComboBox comboBox)
-        {
-            comboBox.Items.Clear();
-            comboBox.SelectionStart = comboBox.Text.Length;
-            comboBox.SelectionLength = 0;
-        }
-
-        private void AddStationNames(ComboBox comboBox)
-        {
-            //comboBox.DroppedDown = true;
-            foreach (Station station in transport.GetStations(comboBox.Text).StationList)
-            {
-                if(station.Name != null)
-                    comboBox.Items.Add(station.Name);
-            }
+            cbStationFrom.ClearStationsNames();
+            cbStationFrom.AddStationNames(transport);
             
         }
 
+        private void cbStationTo_TextUpdate(object sender, EventArgs e)
+        {
+            cbStationTo.ClearStationsNames();
+            cbStationTo.AddStationNames(transport);
+        }
+
+        private void btnSendMail_Click(object sender, EventArgs e)
+        {
+            MailSender mailSender = new MailSender();
+            mailSender.Subject = "Fahrplan";
+            foreach(ListViewItem connection in lvConnections.Items)
+            {
+                foreach(ListViewItem.ListViewSubItem subItem in connection.SubItems)
+                {
+                    mailSender.Body += subItem.Text + " ";
+                }
+                mailSender.Body += "\n";
+            }
+            mailSender.sendMail();
+        }
     }
 }

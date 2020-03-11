@@ -46,11 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DropDownTextBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DropDownTextBox.Designer.cs">
-      <DependentUpon>DropDownTextBox.cs</DependentUpon>
+    <Compile Include="DropDownComboBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -70,11 +67,9 @@
     <Compile Include="fStationboard.Designer.cs">
       <DependentUpon>fStationboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="MailSender.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DropDownTextBox.resx">
-      <DependentUpon>DropDownTextBox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -31,8 +31,6 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbFrom = new System.Windows.Forms.Label();
             this.lbTo = new System.Windows.Forms.Label();
-            this.cbStationFrom = new System.Windows.Forms.ComboBox();
-            this.cbStationTo = new System.Windows.Forms.ComboBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lbWhen = new System.Windows.Forms.Label();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
@@ -45,6 +43,9 @@
             this.cArrivalStation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cDuration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cPlatform = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSendMail = new System.Windows.Forms.Button();
+            this.cbStationTo = new SwissTransportGUI.DropDownComboBox();
+            this.cbStationFrom = new SwissTransportGUI.DropDownComboBox();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -75,24 +76,6 @@
             this.lbTo.TabIndex = 4;
             this.lbTo.Text = "To:";
             // 
-            // cbStationFrom
-            // 
-            this.cbStationFrom.FormattingEnabled = true;
-            this.cbStationFrom.Location = new System.Drawing.Point(12, 120);
-            this.cbStationFrom.Name = "cbStationFrom";
-            this.cbStationFrom.Size = new System.Drawing.Size(383, 33);
-            this.cbStationFrom.TabIndex = 6;
-            this.cbStationFrom.TextUpdate += new System.EventHandler(this.cbStationFrom_TextUpdate);
-            // 
-            // cbStationTo
-            // 
-            this.cbStationTo.FormattingEnabled = true;
-            this.cbStationTo.Location = new System.Drawing.Point(12, 200);
-            this.cbStationTo.Name = "cbStationTo";
-            this.cbStationTo.Size = new System.Drawing.Size(383, 33);
-            this.cbStationTo.TabIndex = 7;
-            this.cbStationTo.TextUpdate += new System.EventHandler(this.cbStationTo_TextUpdate);
-            // 
             // dtpDate
             // 
             this.dtpDate.CustomFormat = "";
@@ -100,7 +83,7 @@
             this.dtpDate.Location = new System.Drawing.Point(17, 282);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(241, 31);
-            this.dtpDate.TabIndex = 8;
+            this.dtpDate.TabIndex = 3;
             // 
             // lbWhen
             // 
@@ -120,7 +103,7 @@
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShowUpDown = true;
             this.dtpTime.Size = new System.Drawing.Size(131, 31);
-            this.dtpTime.TabIndex = 10;
+            this.dtpTime.TabIndex = 4;
             // 
             // btnSearch
             // 
@@ -128,7 +111,7 @@
             this.btnSearch.Location = new System.Drawing.Point(12, 332);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(383, 76);
-            this.btnSearch.TabIndex = 11;
+            this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -150,7 +133,7 @@
             this.lvConnections.Location = new System.Drawing.Point(12, 442);
             this.lvConnections.Name = "lvConnections";
             this.lvConnections.Size = new System.Drawing.Size(1412, 575);
-            this.lvConnections.TabIndex = 12;
+            this.lvConnections.TabIndex = 6;
             this.lvConnections.UseCompatibleStateImageBehavior = false;
             this.lvConnections.View = System.Windows.Forms.View.Details;
             // 
@@ -189,18 +172,48 @@
             this.cPlatform.Text = "Platform";
             this.cPlatform.Width = 100;
             // 
+            // btnSendMail
+            // 
+            this.btnSendMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendMail.Location = new System.Drawing.Point(1041, 332);
+            this.btnSendMail.Name = "btnSendMail";
+            this.btnSendMail.Size = new System.Drawing.Size(383, 76);
+            this.btnSendMail.TabIndex = 6;
+            this.btnSendMail.Text = "Send Mail";
+            this.btnSendMail.UseVisualStyleBackColor = true;
+            this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
+            // 
+            // cbStationTo
+            // 
+            this.cbStationTo.FormattingEnabled = true;
+            this.cbStationTo.Location = new System.Drawing.Point(12, 200);
+            this.cbStationTo.Name = "cbStationTo";
+            this.cbStationTo.Size = new System.Drawing.Size(371, 33);
+            this.cbStationTo.TabIndex = 2;
+            this.cbStationTo.TextUpdate += new System.EventHandler(this.cbStationTo_TextUpdate);
+            // 
+            // cbStationFrom
+            // 
+            this.cbStationFrom.FormattingEnabled = true;
+            this.cbStationFrom.Location = new System.Drawing.Point(12, 120);
+            this.cbStationFrom.Name = "cbStationFrom";
+            this.cbStationFrom.Size = new System.Drawing.Size(371, 33);
+            this.cbStationFrom.TabIndex = 1;
+            this.cbStationFrom.TextUpdate += new System.EventHandler(this.dropDownComboBox1_TextUpdate);
+            // 
             // fSearchConnections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1436, 1029);
+            this.Controls.Add(this.btnSendMail);
+            this.Controls.Add(this.cbStationTo);
+            this.Controls.Add(this.cbStationFrom);
             this.Controls.Add(this.lvConnections);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dtpTime);
             this.Controls.Add(this.lbWhen);
             this.Controls.Add(this.dtpDate);
-            this.Controls.Add(this.cbStationTo);
-            this.Controls.Add(this.cbStationFrom);
             this.Controls.Add(this.lbTo);
             this.Controls.Add(this.lbFrom);
             this.Controls.Add(this.lbTitle);
@@ -217,8 +230,6 @@
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label lbFrom;
         private System.Windows.Forms.Label lbTo;
-        private System.Windows.Forms.ComboBox cbStationFrom;
-        private System.Windows.Forms.ComboBox cbStationTo;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label lbWhen;
         private System.Windows.Forms.DateTimePicker dtpTime;
@@ -231,5 +242,8 @@
         private System.Windows.Forms.ColumnHeader cArrivalStation;
         private System.Windows.Forms.ColumnHeader cPlatform;
         private System.Windows.Forms.ColumnHeader cDuration;
+        private DropDownComboBox cbStationFrom;
+        private DropDownComboBox cbStationTo;
+        private System.Windows.Forms.Button btnSendMail;
     }
 }

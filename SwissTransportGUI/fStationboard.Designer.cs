@@ -30,12 +30,12 @@
         {
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbStation = new System.Windows.Forms.Label();
-            this.cbStation = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lvConnections = new System.Windows.Forms.ListView();
             this.cDepartureTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cDestination = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cDesignation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cbStation = new SwissTransportGUI.DropDownComboBox();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -56,15 +56,6 @@
             this.lbStation.Size = new System.Drawing.Size(85, 25);
             this.lbStation.TabIndex = 4;
             this.lbStation.Text = "Station:";
-            // 
-            // cbStation
-            // 
-            this.cbStation.FormattingEnabled = true;
-            this.cbStation.Location = new System.Drawing.Point(12, 98);
-            this.cbStation.Name = "cbStation";
-            this.cbStation.Size = new System.Drawing.Size(383, 33);
-            this.cbStation.TabIndex = 7;
-            this.cbStation.TextUpdate += new System.EventHandler(this.cbStation_TextUpdate);
             // 
             // btnSearch
             // 
@@ -109,14 +100,23 @@
             this.cDesignation.Text = "Designation";
             this.cDesignation.Width = 200;
             // 
+            // cbStation
+            // 
+            this.cbStation.FormattingEnabled = true;
+            this.cbStation.Location = new System.Drawing.Point(12, 98);
+            this.cbStation.Name = "cbStation";
+            this.cbStation.Size = new System.Drawing.Size(383, 33);
+            this.cbStation.TabIndex = 14;
+            this.cbStation.TextUpdate += new System.EventHandler(this.dropDownComboBox1_TextUpdate);
+            // 
             // fStationboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 929);
+            this.Controls.Add(this.cbStation);
             this.Controls.Add(this.lvConnections);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.cbStation);
             this.Controls.Add(this.lbStation);
             this.Controls.Add(this.lbTitle);
             this.MinimumSize = new System.Drawing.Size(900, 1000);
@@ -131,11 +131,11 @@
 
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label lbStation;
-        private System.Windows.Forms.ComboBox cbStation;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListView lvConnections;
         private System.Windows.Forms.ColumnHeader cDepartureTime;
         private System.Windows.Forms.ColumnHeader cDestination;
         private System.Windows.Forms.ColumnHeader cDesignation;
+        private DropDownComboBox cbStation;
     }
 }
