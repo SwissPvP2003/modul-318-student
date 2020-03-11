@@ -241,7 +241,7 @@
             this.Controls.Add(this.lbTo);
             this.Controls.Add(this.lbFrom);
             this.Controls.Add(this.lbTitle);
-            this.MinimumSize = new System.Drawing.Size(700, 1100);
+            this.MinimumSize = new System.Drawing.Size(1462, 1100);
             this.Name = "fSearchConnections";
             this.Text = "Verbindungen Suchen";
             this.ResumeLayout(false);

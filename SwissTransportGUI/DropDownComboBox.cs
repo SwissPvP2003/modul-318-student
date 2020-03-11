@@ -14,6 +14,7 @@ namespace SwissTransportGUI
         public void ClearStationsNames()
         {
             Items.Clear();
+            Items.Add("");
             BackColor = SystemColors.Window;
             SelectionStart = Text.Length;
             SelectionLength = 0;
@@ -21,17 +22,19 @@ namespace SwissTransportGUI
 
         public void AddStationNames(Transport transport)
         {
-            DroppedDown = true;
-            foreach (Station station in transport.GetStations(Text).StationList)
+            if(Text.Length >= 3)
             {
-                if (station.Name != null && station.Id != null)
-                    Items.Add(station.Name);
-            }
-            if(Items.Count <= 0)
-            {
+                DroppedDown = true;
+                foreach (Station station in transport.GetStations(Text).StationList)
+                {
+                    if (station.Name != null && station.Id != null)
+                        Items.Add(station.Name);
+                }
+                if(Items.Count <= 0)
+                {
 
+                }
             }
-
         }
 
         public bool IsBoxFilled()

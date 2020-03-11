@@ -26,11 +26,18 @@ namespace SwissTransportGUI
             lvConnections.Items.Clear();
             if (cbStation.IsBoxFilled())
             {
-                StationBoardRoot StationBoardRoot = GetStationboard(cbStation.Text, string.Empty);
+                StationBoardRoot stationBoardRoot = GetStationboard(cbStation.Text, string.Empty);
 
-                foreach (StationBoard stationBoard in StationBoardRoot.Entries)
+                if(stationBoardRoot.Entries.Count > 0)
                 {
-                    lvConnections.Items.Add(ConvertToListViewItem(stationBoard));
+                    foreach (StationBoard stationBoard in stationBoardRoot.Entries)
+                    {
+                        lvConnections.Items.Add(ConvertToListViewItem(stationBoard));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No Results found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

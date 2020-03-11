@@ -65,7 +65,7 @@
             this.btnSearch.Location = new System.Drawing.Point(12, 154);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(383, 76);
-            this.btnSearch.TabIndex = 12;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -82,8 +82,8 @@
             this.lvConnections.HideSelection = false;
             this.lvConnections.Location = new System.Drawing.Point(12, 263);
             this.lvConnections.Name = "lvConnections";
-            this.lvConnections.Size = new System.Drawing.Size(850, 654);
-            this.lvConnections.TabIndex = 13;
+            this.lvConnections.Size = new System.Drawing.Size(1412, 754);
+            this.lvConnections.TabIndex = 4;
             this.lvConnections.UseCompatibleStateImageBehavior = false;
             this.lvConnections.View = System.Windows.Forms.View.Details;
             // 
@@ -108,26 +108,28 @@
             this.cbStation.Location = new System.Drawing.Point(12, 98);
             this.cbStation.Name = "cbStation";
             this.cbStation.Size = new System.Drawing.Size(383, 33);
-            this.cbStation.TabIndex = 14;
+            this.cbStation.TabIndex = 1;
             this.cbStation.TextUpdate += new System.EventHandler(this.dropDownComboBox1_TextUpdate);
             // 
             // btnShowMap
             // 
+            this.btnShowMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold);
-            this.btnShowMap.Location = new System.Drawing.Point(479, 154);
+            this.btnShowMap.Location = new System.Drawing.Point(1041, 154);
             this.btnShowMap.Name = "btnShowMap";
             this.btnShowMap.Size = new System.Drawing.Size(383, 76);
-            this.btnShowMap.TabIndex = 15;
+            this.btnShowMap.TabIndex = 3;
             this.btnShowMap.Text = "Show Map";
             this.btnShowMap.UseVisualStyleBackColor = true;
             this.btnShowMap.Click += new System.EventHandler(this.btnShowMap_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(753, 12);
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.Location = new System.Drawing.Point(1315, 9);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 65);
-            this.btnCancel.TabIndex = 16;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -136,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 929);
+            this.ClientSize = new System.Drawing.Size(1436, 1029);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnShowMap);
             this.Controls.Add(this.cbStation);
@@ -144,7 +146,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbStation);
             this.Controls.Add(this.lbTitle);
-            this.MinimumSize = new System.Drawing.Size(900, 1000);
+            this.MinimumSize = new System.Drawing.Size(1462, 1100);
             this.Name = "fStationboard";
             this.Text = "fStationboard";
             this.ResumeLayout(false);

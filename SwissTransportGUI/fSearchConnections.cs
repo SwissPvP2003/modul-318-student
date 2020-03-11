@@ -26,9 +26,16 @@ namespace SwissTransportGUI
             if(cbStationFrom.IsBoxFilled() && cbStationTo.IsBoxFilled())
             {
                 Connections connections = GetConnections(cbStationFrom.Text, cbStationTo.Text, dtpDate.Text, dtpTime.Text);
-                foreach (Connection connection in connections.ConnectionList)
+                if(connections.ConnectionList.Count > 0)
                 {
-                    lvConnections.Items.Add(ConvertToListViewItem(connection));
+                    foreach (Connection connection in connections.ConnectionList)
+                    {
+                        lvConnections.Items.Add(ConvertToListViewItem(connection));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No Results found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
