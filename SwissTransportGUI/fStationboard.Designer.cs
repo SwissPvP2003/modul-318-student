@@ -36,6 +36,7 @@
             this.cDestination = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cDesignation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbStation = new SwissTransportGUI.DropDownComboBox();
+            this.btnShowMap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -109,11 +110,23 @@
             this.cbStation.TabIndex = 14;
             this.cbStation.TextUpdate += new System.EventHandler(this.dropDownComboBox1_TextUpdate);
             // 
+            // btnShowMap
+            // 
+            this.btnShowMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold);
+            this.btnShowMap.Location = new System.Drawing.Point(479, 154);
+            this.btnShowMap.Name = "btnShowMap";
+            this.btnShowMap.Size = new System.Drawing.Size(383, 76);
+            this.btnShowMap.TabIndex = 15;
+            this.btnShowMap.Text = "Show Map";
+            this.btnShowMap.UseVisualStyleBackColor = true;
+            this.btnShowMap.Click += new System.EventHandler(this.btnShowMap_Click);
+            // 
             // fStationboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 929);
+            this.Controls.Add(this.btnShowMap);
             this.Controls.Add(this.cbStation);
             this.Controls.Add(this.lvConnections);
             this.Controls.Add(this.btnSearch);
@@ -137,5 +150,6 @@
         private System.Windows.Forms.ColumnHeader cDestination;
         private System.Windows.Forms.ColumnHeader cDesignation;
         private DropDownComboBox cbStation;
+        private System.Windows.Forms.Button btnShowMap;
     }
 }

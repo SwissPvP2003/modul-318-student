@@ -17,7 +17,6 @@ namespace SwissTransportGUI
         public fStartGUI()
         {
             InitializeComponent();
-           
         }
 
         private void btnSearchConnetctions_Click(object sender, EventArgs e)

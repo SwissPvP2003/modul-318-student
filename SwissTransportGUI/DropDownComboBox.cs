@@ -27,6 +27,10 @@ namespace SwissTransportGUI
                 if (station.Name != null && station.Id != null)
                     Items.Add(station.Name);
             }
+            if(Items.Count <= 0)
+            {
+
+            }
 
         }
 

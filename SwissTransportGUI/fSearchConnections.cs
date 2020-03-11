@@ -50,7 +50,6 @@ namespace SwissTransportGUI
         {
             cbStationFrom.ClearStationsNames();
             cbStationFrom.AddStationNames(transport);
-            
         }
 
         private void cbStationTo_TextUpdate(object sender, EventArgs e)
@@ -69,7 +68,6 @@ namespace SwissTransportGUI
                 {
                     mailSender.Body += subItem.Text + " ";
                 }
-                mailSender.Body += "\n";
             }
             mailSender.sendMail();
         }
