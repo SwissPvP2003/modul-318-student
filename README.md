@@ -1,12 +1,21 @@
 # M318 SwissTransport API
 ## Inhaltsverzeichnis
 * [Einleitung](#einleitung)
- * [Aufgabenstellung](#aufgabenstellung) 
-* [Funktionen](#funktionen) 
+  * [Aufgabenstellung](#aufgabenstellung)
+  * [Anforderung](#anforderung) 
+  * [Zweck](#zweck) 
+* [Funktionen](#funktionen)
 * [Bugs](#bugs)  
 * [Planung](#planung)
-* [Programmierrichtlinen](#programmierrichtlinen) 
-* [Testing](#testing) 
+  * [Usecases](#usecases)
+* [Programmierrichtlinen](#programmierrichtlinen)
+  * [Namensgebung](#namensgebung)
+  * [Deklaration](#deklaration)
+  * [Kommentare](#kommentare)
+  * [Methoden, Schleifen, Verzweigungen, Try Catch](#methoden)
+* [Testing](#testing)
+  * [Testfälle](#testfälle)
+  * [Testprotokoll](#testprotokoll)
 * [Installation Anleitung](#installationanleitung) 
 
 <a name="einleitung"/>
@@ -17,6 +26,9 @@
 
 ### Aufgabenstellung
 Unsere Aufgabe ist es eine Desktop Applikation mit Hilfe der Transport API zu Programmieren. Wir haben mehrere Anforderungen bekommen, die nach Wichtigkeit priorisiert sind. Uns ist es selber überlasen welche wir umsetzten möchten doch sollten die Anforderungen mit Priorität 1 auf jeden Fall umgesetzt werden. Mein Ziel ist es bis zur Abgabe ein fertiges Programm zu haben und die Code Konventionen einzuhalten. Auch möchte ich Die Anforderung mit Priorität 1 und 2 abgeschlossen haben.
+
+<a name="anforderung"/>
+
 ### Anforderung
 | ID   | Beschreibung  | Priorität |
 | -----|:-------------:| -----:|
@@ -28,6 +40,9 @@ Unsere Aufgabe ist es eine Desktop Applikation mit Hilfe der Transport API zu Pr
 | A006 | Als ÖV-Benutzer möchte ich sehen, wo sich eine Station befindet, damit ich mir besser vorstellen kann, wie die Situation vor Ort aussieht. | 3 |
 | A007 | Als ÖV-Benutzer möchte Stationen finden, die sich ganz in der Nähe meiner aktuellen Position befinden, damit ich schnell einen Anschluss erreichen kann. | 3 |
 | A008 | Ich möchte meine gefundenen Resultate via Mail weiterleiten können, damit  auch andere von meinen Recherchen profitieren können. | 3 |
+
+<a name="zweck"/>
+
 ### Zweck
 Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokumentieren. Das Dokument enthält die Planung, allgemeine Informationen über das Projekt und das Testing der Applikation. Auch ist eine Installationsanleitung am Ende des Dokumentes enthalten.
 
@@ -42,7 +57,10 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 <a name="planung"/>
 
 ## Planung
-### Usecase
+
+<a name="usecases"/>
+
+### Usecases
 | USE CASE | 1, START- & END-STATION SUCHEN  |
 | -----|--------------|
 |BESCHREIBUNG|Damit der User sich keine Stationen merken muss kann er nach Stationen suchen. Die suche muss über eine Texteingabe erfolgen. Es werden auch schon Stationen angezeigt, wenn der Name noch nicht den ganzen Namen eingegeben hat.|
@@ -72,6 +90,9 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 <a name="programmierrichtlinen"/>
 
 ## Programmierrichtlinen
+
+<a name="anforderung"/>
+
 ### Namensgebung
 | Stelle | Regel  | Beispiel                |
 |--------|--------|-------------------------|
@@ -80,6 +101,9 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 |Methoden|PascalCase| ```AreStationFieldsFilled()```|
 |Klassen|Gross|```Station```|
 |GUI|Fängt mit Kürzel von GUI-Element an.|```btnSearchConnections```|
+
+<a name="Deklaration"/>
+
 ### Deklaration
 Globale Variablen unterhalb des Klassenkopfes definieren und im Konstruktor deklarieren
 ```csharp 
@@ -96,6 +120,9 @@ Lokale variablen unterhalb des Methodenkopfes definieren und deklariere
   int varOne = 0;
 }
 ```
+
+<a name="kommentare"/>
+
 ### Kommentare
 Code sollte auch ohne Kommentare lesbar sein. Keine Kommentare, nur bei Komplexen Code Kommentare.
 
@@ -107,6 +134,8 @@ while (x == y)
   somethingComplicated();
 }
  ```
+ 
+ <a name="methoden"/>
  
 ### Methoden, Schleifen, Verzweigungen, Try Catch
 Allman, Klammern immer auf neu Line bei Statements
@@ -121,7 +150,13 @@ while (x == y)
 <a name="testing"/>
 
 ## Testing
+
+<a name="testfälle"/>
+
 ### Testfälle
+
+<a name="testprotokoll"/>
+
 ### Testprotokoll
 
 <a name="installationanleitung"/>
