@@ -14,6 +14,7 @@ namespace SwissTransportGUI
     public partial class fStationboard : Form
     {
         readonly Transport transport = new Transport();
+
         public fStationboard()
         {
             InitializeComponent();
@@ -42,6 +43,30 @@ namespace SwissTransportGUI
         {
             string[] stationboardInformations = {stationBoard.Stop.Departure.TimeOfDay.ToString(), stationBoard.To, stationBoard.Category + stationBoard.Number };
             return new ListViewItem(stationboardInformations);
+        }
+
+        private void ClearStationsNames(ComboBox comboBox)
+        {
+            comboBox.Items.Clear();
+            comboBox.SelectionStart = comboBox.Text.Length;
+            comboBox.SelectionLength = 0;
+        }
+
+        private void AddStationNames(ComboBox comboBox)
+        {
+            comboBox.DroppedDown = true;
+            foreach (Station station in transport.GetStations(comboBox.Text).StationList)
+            {
+                if (station.Name != null && station.Id != null)
+                    comboBox.Items.Add(station.Name);
+            }
+
+        }
+
+        private void cbStation_TextUpdate(object sender, EventArgs e)
+        {
+            ClearStationsNames(cbStation);
+            AddStationNames(cbStation);
         }
     }
 }

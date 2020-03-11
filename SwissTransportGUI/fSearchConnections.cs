@@ -24,7 +24,7 @@ namespace SwissTransportGUI
         {
             lvConnections.Items.Clear();
 
-            Connections connections = GetConnections(cbStationFrom.Text, cbStationTo.Text);
+            Connections connections = GetConnections(cbStationFrom.Text, cbStationTo.Text, dtpDate.Text, dtpTime.Text);
 
             foreach (Connection connection in connections.ConnectionList)
             {
@@ -32,10 +32,10 @@ namespace SwissTransportGUI
             }
         }
 
-        private Connections GetConnections(string fromStation, string toStation)
+        private Connections GetConnections(string fromStation, string toStation, string date, string time)
         {
             Connections connections;
-            connections = transport.GetConnections(fromStation, toStation);
+            connections = transport.GetConnections(fromStation, toStation, date, time);
             return connections;
         }
 
@@ -65,7 +65,7 @@ namespace SwissTransportGUI
 
         private void AddStationNames(ComboBox comboBox)
         {
-            comboBox.DroppedDown = true;
+            //comboBox.DroppedDown = true;
             foreach (Station station in transport.GetStations(comboBox.Text).StationList)
             {
                 if(station.Name != null)

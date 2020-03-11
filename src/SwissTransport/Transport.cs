@@ -36,18 +36,18 @@ namespace SwissTransport
             {
                 var readToEnd = new StreamReader(responseStream).ReadToEnd();
                 var stationboard =
-                    JsonConvert.DeserializeObject<StationBoardRoot>(readToEnd);
+                    JsonConvert.DeserializeObject<StationBoardRoot>(readToEnd, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
                 return stationboard;
             }
 
             return null;
         }
 
-        public Connections GetConnections(string fromStation, string toStation)
+        public Connections GetConnections(string fromStation, string toStation, string date, string time)
         {
             fromStation = System.Uri.EscapeDataString(fromStation);
             toStation = System.Uri.EscapeDataString(toStation);
-            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStation);
+            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStation + "&date=" + date + "&time=" + time);
             var response = request.GetResponse();
             var responseStream = response.GetResponseStream();
 
@@ -55,7 +55,7 @@ namespace SwissTransport
             {
                 var readToEnd = new StreamReader(responseStream).ReadToEnd();
                 var connections =
-                    JsonConvert.DeserializeObject<Connections>(readToEnd);
+                    JsonConvert.DeserializeObject<Connections>(readToEnd, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
                 return connections;
             }
 

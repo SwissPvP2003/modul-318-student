@@ -64,6 +64,7 @@
             this.cbStation.Name = "cbStation";
             this.cbStation.Size = new System.Drawing.Size(383, 33);
             this.cbStation.TabIndex = 7;
+            this.cbStation.TextUpdate += new System.EventHandler(this.cbStation_TextUpdate);
             // 
             // btnSearch
             // 

@@ -18,5 +18,7 @@ namespace SwissTransportGUI
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fStartGUI());
         }
+
+
     }
 }
