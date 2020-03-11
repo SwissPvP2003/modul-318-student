@@ -46,6 +46,7 @@
             this.btnSendMail = new System.Windows.Forms.Button();
             this.cbStationTo = new SwissTransportGUI.DropDownComboBox();
             this.cbStationFrom = new SwissTransportGUI.DropDownComboBox();
+            this.btnSwitchStations = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -83,7 +84,7 @@
             this.dtpDate.Location = new System.Drawing.Point(17, 282);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(241, 31);
-            this.dtpDate.TabIndex = 3;
+            this.dtpDate.TabIndex = 4;
             // 
             // lbWhen
             // 
@@ -103,7 +104,7 @@
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShowUpDown = true;
             this.dtpTime.Size = new System.Drawing.Size(131, 31);
-            this.dtpTime.TabIndex = 4;
+            this.dtpTime.TabIndex = 5;
             // 
             // btnSearch
             // 
@@ -111,7 +112,7 @@
             this.btnSearch.Location = new System.Drawing.Point(12, 332);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(383, 76);
-            this.btnSearch.TabIndex = 5;
+            this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -133,7 +134,7 @@
             this.lvConnections.Location = new System.Drawing.Point(12, 442);
             this.lvConnections.Name = "lvConnections";
             this.lvConnections.Size = new System.Drawing.Size(1412, 575);
-            this.lvConnections.TabIndex = 6;
+            this.lvConnections.TabIndex = 8;
             this.lvConnections.UseCompatibleStateImageBehavior = false;
             this.lvConnections.View = System.Windows.Forms.View.Details;
             // 
@@ -178,7 +179,7 @@
             this.btnSendMail.Location = new System.Drawing.Point(1041, 332);
             this.btnSendMail.Name = "btnSendMail";
             this.btnSendMail.Size = new System.Drawing.Size(383, 76);
-            this.btnSendMail.TabIndex = 6;
+            this.btnSendMail.TabIndex = 7;
             this.btnSendMail.Text = "Send Mail";
             this.btnSendMail.UseVisualStyleBackColor = true;
             this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
@@ -201,11 +202,22 @@
             this.cbStationFrom.TabIndex = 1;
             this.cbStationFrom.TextUpdate += new System.EventHandler(this.dropDownComboBox1_TextUpdate);
             // 
+            // btnSwitchStations
+            // 
+            this.btnSwitchStations.Location = new System.Drawing.Point(424, 120);
+            this.btnSwitchStations.Name = "btnSwitchStations";
+            this.btnSwitchStations.Size = new System.Drawing.Size(204, 113);
+            this.btnSwitchStations.TabIndex = 3;
+            this.btnSwitchStations.Text = "Switch Stations";
+            this.btnSwitchStations.UseVisualStyleBackColor = true;
+            this.btnSwitchStations.Click += new System.EventHandler(this.btnSwitchStations_Click);
+            // 
             // fSearchConnections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1436, 1029);
+            this.Controls.Add(this.btnSwitchStations);
             this.Controls.Add(this.btnSendMail);
             this.Controls.Add(this.cbStationTo);
             this.Controls.Add(this.cbStationFrom);
@@ -245,5 +257,6 @@
         private DropDownComboBox cbStationFrom;
         private DropDownComboBox cbStationTo;
         private System.Windows.Forms.Button btnSendMail;
+        private System.Windows.Forms.Button btnSwitchStations;
     }
 }

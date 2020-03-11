@@ -71,5 +71,12 @@ namespace SwissTransportGUI
             }
             mailSender.sendMail();
         }
+
+        private void btnSwitchStations_Click(object sender, EventArgs e)
+        {
+            string station = cbStationFrom.Text;
+            cbStationFrom.Text = cbStationTo.Text;
+            cbStationTo.Text = station;
+        }
     }
 }
