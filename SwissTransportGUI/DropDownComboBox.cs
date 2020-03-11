@@ -25,6 +25,7 @@ namespace SwissTransportGUI
             if(Text.Length >= 3)
             {
                 DroppedDown = true;
+                Cursor.Current = Cursors.Default;
                 foreach (Station station in transport.GetStations(Text).StationList)
                 {
                     if (station.Name != null && station.Id != null)

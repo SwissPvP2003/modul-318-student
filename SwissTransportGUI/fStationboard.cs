@@ -23,6 +23,7 @@ namespace SwissTransportGUI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             lvConnections.Items.Clear();
             if (cbStation.IsBoxFilled())
             {
