@@ -1,4 +1,14 @@
 # M318 SwissTransport API
+## Inhaltsverzeichnis
+* [Einleitung](#einleitung) 
+* [Funktionen](#funktionen) 
+* [Bugs](#bugs)  
+* [Planung](#planung)
+* [Programmierrichtlinen](#programmierrichtlinen) 
+* [Testing](#testing) 
+* [Installation Anleitung](#installationanleitung) 
+
+<a name="einleitung"/>
 
 ## Einleitung
 ### Aufgabenstellung
@@ -16,8 +26,17 @@ Unsere Aufgabe ist es eine Desktop Applikation mit Hilfe der Transport API zu Pr
 | A008 | Ich möchte meine gefundenen Resultate via Mail weiterleiten können, damit  auch andere von meinen Recherchen profitieren können. | 3 |
 ### Zweck
 Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokumentieren. Das Dokument enthält die Planung, allgemeine Informationen über das Projekt und das Testing der Applikation. Auch ist eine Installationsanleitung am Ende des Dokumentes enthalten.
+
+<a name="funktionen"/>
+
 ## Funktionen
+
+<a name="bugs"/>
+
 ## Bugs
+
+<a name="planung"/>
+
 ## Planung
 ### Usecase
 | USE CASE | 1, START- & END-STATION SUCHEN  |
@@ -45,6 +64,8 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 |VOBEDINGUNGEN|Internetverbindung|
 |ABLAUF| <ol><li>User öffnet Programm</li><li>User klickt entweder auf «Abfahrstafel»</li><li>User gibt Namen von Startstation ein.</li><li>User klickt auf Abfahrstafel anzeigen</li><li>User bekommt Liste mit den nächsten Verbindungen die von der eingegeben Stationen ausgehen angezeigt.</li></ol> |
 |ERGEBNIS|User bekommt Liste mit den nächsten Verbindungen die von der eingegeben Stationen ausgehen angezeigt. Die Tafel funktioniert genauso wie die Tafel die an den Bahnhöfen stehen.|
+
+<a name="programmierrichtlinen"/>
 
 ## Programmierrichtlinen
 ### Namensgebung
@@ -93,8 +114,12 @@ while (x == y)
     somethingelse();
 }
 ```
+<a name="testing"/>
 
 ## Testing
 ### Testfälle
 ### Testprotokoll
+
+<a name="installationanleitung"/>
+
 ## Installation Anleitung
