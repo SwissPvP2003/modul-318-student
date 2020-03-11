@@ -53,9 +53,9 @@
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.Location = new System.Drawing.Point(12, 9);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(563, 61);
+            this.lbTitle.Size = new System.Drawing.Size(490, 61);
             this.lbTitle.TabIndex = 0;
-            this.lbTitle.Text = "Verbindungen Suchen";
+            this.lbTitle.Text = "Search Connection";
             // 
             // lbFrom
             // 

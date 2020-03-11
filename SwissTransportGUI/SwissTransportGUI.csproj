@@ -72,6 +72,9 @@
     <EmbeddedResource Include="fSearchConnections.resx">
       <DependentUpon>fSearchConnections.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fStationboard.resx">
+      <DependentUpon>fStationboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

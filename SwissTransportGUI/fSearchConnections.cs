@@ -45,13 +45,6 @@ namespace SwissTransportGUI
             return new ListViewItem(connections);
         }
 
-        private StationBoardRoot GetStationboard()
-        {
-            StationBoardRoot stationBoardRoot;
-            stationBoardRoot = transport.GetStationBoard("Sursee", "8502007");
-            return stationBoardRoot;
-        }
-
         private void cbStationFrom_TextUpdate(object sender, EventArgs e)
         {
             ClearStationsNames(cbStationFrom);
