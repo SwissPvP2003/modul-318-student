@@ -37,6 +37,7 @@
             this.cDesignation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbStation = new SwissTransportGUI.DropDownComboBox();
             this.btnShowMap = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -121,11 +122,22 @@
             this.btnShowMap.UseVisualStyleBackColor = true;
             this.btnShowMap.Click += new System.EventHandler(this.btnShowMap_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(753, 12);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(109, 65);
+            this.btnCancel.TabIndex = 16;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // fStationboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 929);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnShowMap);
             this.Controls.Add(this.cbStation);
             this.Controls.Add(this.lvConnections);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.ColumnHeader cDesignation;
         private DropDownComboBox cbStation;
         private System.Windows.Forms.Button btnShowMap;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

@@ -44,9 +44,10 @@
             this.cDuration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cPlatform = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSendMail = new System.Windows.Forms.Button();
+            this.btnSwitchStations = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.cbStationTo = new SwissTransportGUI.DropDownComboBox();
             this.cbStationFrom = new SwissTransportGUI.DropDownComboBox();
-            this.btnSwitchStations = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -184,6 +185,26 @@
             this.btnSendMail.UseVisualStyleBackColor = true;
             this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
             // 
+            // btnSwitchStations
+            // 
+            this.btnSwitchStations.Location = new System.Drawing.Point(424, 120);
+            this.btnSwitchStations.Name = "btnSwitchStations";
+            this.btnSwitchStations.Size = new System.Drawing.Size(204, 113);
+            this.btnSwitchStations.TabIndex = 3;
+            this.btnSwitchStations.Text = "Switch Stations";
+            this.btnSwitchStations.UseVisualStyleBackColor = true;
+            this.btnSwitchStations.Click += new System.EventHandler(this.btnSwitchStations_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(1315, 12);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(109, 65);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // cbStationTo
             // 
             this.cbStationTo.FormattingEnabled = true;
@@ -202,21 +223,12 @@
             this.cbStationFrom.TabIndex = 1;
             this.cbStationFrom.TextUpdate += new System.EventHandler(this.dropDownComboBox1_TextUpdate);
             // 
-            // btnSwitchStations
-            // 
-            this.btnSwitchStations.Location = new System.Drawing.Point(424, 120);
-            this.btnSwitchStations.Name = "btnSwitchStations";
-            this.btnSwitchStations.Size = new System.Drawing.Size(204, 113);
-            this.btnSwitchStations.TabIndex = 3;
-            this.btnSwitchStations.Text = "Switch Stations";
-            this.btnSwitchStations.UseVisualStyleBackColor = true;
-            this.btnSwitchStations.Click += new System.EventHandler(this.btnSwitchStations_Click);
-            // 
             // fSearchConnections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1436, 1029);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSwitchStations);
             this.Controls.Add(this.btnSendMail);
             this.Controls.Add(this.cbStationTo);
@@ -258,5 +270,6 @@
         private DropDownComboBox cbStationTo;
         private System.Windows.Forms.Button btnSendMail;
         private System.Windows.Forms.Button btnSwitchStations;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

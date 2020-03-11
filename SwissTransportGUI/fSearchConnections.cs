@@ -78,5 +78,10 @@ namespace SwissTransportGUI
             cbStationFrom.Text = cbStationTo.Text;
             cbStationTo.Text = station;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
