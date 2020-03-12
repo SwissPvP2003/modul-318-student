@@ -43,7 +43,7 @@
 <a name="aufgabenstellung"/>
 
 ### Aufgabenstellung
-Unsere Aufgabe ist es eine Desktop Applikation mit Hilfe der Transport API zu Programmieren. Wir haben mehrere Anforderungen bekommen, die nach Wichtigkeit priorisiert sind. Uns ist es selber überlasen welche wir umsetzten möchten doch sollten die Anforderungen mit Priorität 1 auf jeden Fall umgesetzt werden. Mein Ziel ist es bis zur Abgabe ein fertiges Programm zu haben und die Code Konventionen einzuhalten. Auch möchte ich Die Anforderung mit Priorität 1 und 2 abgeschlossen haben.
+Unsere Aufgabe ist es eine Desktop Applikation mit Hilfe der Transport API zu Programmieren. Wir haben mehrere Anforderungen bekommen, die nach Wichtigkeit priorisiert sind. Uns ist es selber überlasen welche wir umsetzten möchten, doch sollten die Anforderungen mit Priorität 1 auf jeden Fall umgesetzt werden. Mein Ziel ist es bis zur Abgabe ein fertiges Programm zu haben und die Code Konventionen einzuhalten. Auch möchte ich Die Anforderung mit Priorität 1 und 2 abgeschlossen haben.
 
 <a name="anforderung"/>
 
@@ -74,14 +74,10 @@ In der Tabele ist ersichtlich welche Funktionen umgesetz wurden und welche nicht
 | A02         | 1         | ✅      | Verbindungsseite: Mit Verbindung suchen werden die nächsten Verbindungen anhand der Angaben gesucht und angezeigt | 
 | A03         | 1         | ✅      | Abfahrtsplansseite: Mit Abfahrtsplan anzeigen werden die nächste Abfahrten ab der eingegebenen Station gesucht und angezeigt | 
 | A04         | 2         | ✅      | Während der Eingabe einer Station werden Vorschläge in einem Dropdown angezeigt | 
-| A05         | 2         | ✅      | Der User kann ein belibiges Datum und Zeitpunkt eingeben|
-| A06         | 3         | ✅      | Wenn eine Station im Stationboard eingegeben wird und der Button Auf Karte anzeigen gedrückt wird öffnet sich ein Browser mit Google Maps|  
+| A05         | 2         | ✅      | Der User kann ein beliebiges Datum und Zeitpunkt eingeben|
+| A06         | 3         | ✅      | Wenn eine Station im Stationboard eingegeben wird und der Button Show Card anzeigen gedrückt wird öffnet sich ein Browser mit Google Maps|  
 | A07         | 3         | ❌      | Wurde nicht umgesetzt|  
 | A08         | 3         | ✅      | Belibiges Mailprogramm wird mit Resultaten aus Verbindungs Suche geöffnet |
-
-<a name="bugs"/>
-
-## Bugs
 
 <a name="planung"/>
 
@@ -104,7 +100,7 @@ In der Tabele ist ersichtlich welche Funktionen umgesetz wurden und welche nicht
 #### VERBINDUNGEN ANZEIGEN
 | USE CASE |          |
 | ---------|----------|
-|BESCHREIBUNG|Dem User werden die nächsten 5 Verbindungen zwischen der Start- und End-Station angezeigt|
+|BESCHREIBUNG|Dem User werden die nächsten 4 Verbindungen zwischen der Start- und End-Station angezeigt|
 |AKTEUR|SBB User|
 |AUSLÖSER|SBB User möchte, die wissen was die besten Verbindungen zwischen den eingegebenen Stationen wissen.|
 |ABLAUF| <ol><li>User öffnet Programm</li><li>User klickt entweder auf «Verbindungen anzeigen»</li><li>User gibt Namen von Start- und Endstation ein.</li><li>User klickt auf Verbindungen anzeigen</li><li>User bekommt Liste mit den 5 nächsten Verbindungen zwischen den 2 Stationen angezeigt.</li></ol> |
@@ -122,7 +118,8 @@ In der Tabele ist ersichtlich welche Funktionen umgesetz wurden und welche nicht
 
 <a name="udiagramm"/>
 
-#### UseCase Diagram
+#### UseCase Diagramm
+Ein UseCase Diagramm das die UseCases Bildlich dahrstellt.
 
 ![Use Case](/img/UseCase.png)
 
@@ -140,7 +137,7 @@ Dieses Diagramm zeigt wie die Funktionen des Programm bedient werden.
 ### Mockups
 
 #### Stationboard
-Das Mokup zeigt wie das GUI zum Stationboard aussehen sollte
+Das Mockup zeigt wie das GUI zum Stationboard aussehen sollte
 ![Mockup](/img/Mockup1.png)
 
 ---
@@ -152,7 +149,7 @@ Die Grafik zeigt den Startpunkt der Applikation
 ---
 
 #### Search Connections
-Das Mokup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte
+Das Mockup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte
 ![Mockup](/img/Mockup3.png)
 
 <a name="programmierrichtlinen"/>
@@ -338,7 +335,7 @@ while (x == y)
 ## Installation Anleitung
 
 Die Setupdatei kann direkt unter diesem Link heruntergeladen werden
-**https://raw.github.com/SwissPvP2003/modul-318-student/tree/master/download/SetupSwissTransportAPI.msi** 
+**https://github.com/SwissPvP2003/modul-318-student/tree/master/download/SetupSwissTransportAPI.msi** 
 
 Gehe in den Downloads Ordner oder führe die Setupdatei **SetupSwissTransportAPI.msi** direkt vom Browser aus aus. Falls eine Meldung eingeblendet wird, dass der Computer durch Windows geschütz wurde, klicke auf **Weitere Informationen** und **Trotzdem ausführen**, um mit der Installation zu beginnen.
 
@@ -348,6 +345,6 @@ Das Programm wird dan Standartmässing im Programm Files Order installiert. Der 
 
 Klicke auf **Next** um die Anwendung zu Installieren.
 
-Die Setup Datei kann auch dazu verwendet werden um das Programm zu **Deintallieren** und zu **reparieren**.
+Die Setup Datei kann auch dazu verwendet werden um das Programm zu **Deintallieren** und zu **reparieren**. Dazu einfach die Setupdatei ausführen und die entsprechende Funktion wählen.
 
 
