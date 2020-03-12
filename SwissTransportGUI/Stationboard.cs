@@ -55,7 +55,7 @@ namespace SwissTransportGUI
             if(cbStation.IsBoxFilled())
             {
                 Station station = transport.GetStations(cbStation.Text).StationList.First();
-                Process.Start("https://www.google.com/maps/search/?api=1&query="+ station.Coordinate.XCoordinate + "," + station.Coordinate.YCoordinate);
+                Process.Start("https://www.google.com/maps/search/?api=1&query="+ station.Coordinate.XCoordinate.ToString().Replace(",", ".") + "," + station.Coordinate.YCoordinate.ToString().Replace(",", "."));
             }
         }
         private void BtnCancel_Click(object sender, EventArgs e)
