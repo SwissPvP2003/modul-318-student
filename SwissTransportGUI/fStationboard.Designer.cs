@@ -68,7 +68,7 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // lvConnections
             // 
@@ -109,7 +109,7 @@
             this.cbStation.Name = "cbStation";
             this.cbStation.Size = new System.Drawing.Size(383, 33);
             this.cbStation.TabIndex = 1;
-            this.cbStation.TextUpdate += new System.EventHandler(this.dropDownComboBox1_TextUpdate);
+            this.cbStation.TextUpdate += new System.EventHandler(this.DropDownComboBox1_TextUpdate);
             // 
             // btnShowMap
             // 
@@ -121,7 +121,7 @@
             this.btnShowMap.TabIndex = 3;
             this.btnShowMap.Text = "Show Map";
             this.btnShowMap.UseVisualStyleBackColor = true;
-            this.btnShowMap.Click += new System.EventHandler(this.btnShowMap_Click);
+            this.btnShowMap.Click += new System.EventHandler(this.BtnShowMap_Click);
             // 
             // btnCancel
             // 
@@ -132,7 +132,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // fStationboard
             // 
@@ -148,7 +148,7 @@
             this.Controls.Add(this.lbTitle);
             this.MinimumSize = new System.Drawing.Size(1462, 1100);
             this.Name = "fStationboard";
-            this.Text = "fStationboard";
+            this.Text = "Stationboard";
             this.ResumeLayout(false);
             this.PerformLayout();
 

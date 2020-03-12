@@ -39,11 +39,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(60, 39);
+            this.lblTitle.Location = new System.Drawing.Point(168, 41);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(899, 91);
+            this.lblTitle.Size = new System.Drawing.Size(715, 91);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Wählen sie eine Option:";
+            this.lblTitle.Text = "Choose an Option:";
             // 
             // btnSearchConnetctions
             // 
@@ -54,7 +54,7 @@
             this.btnSearchConnetctions.TabIndex = 1;
             this.btnSearchConnetctions.Text = "Search Connections";
             this.btnSearchConnetctions.UseVisualStyleBackColor = true;
-            this.btnSearchConnetctions.Click += new System.EventHandler(this.btnSearchConnetctions_Click);
+            this.btnSearchConnetctions.Click += new System.EventHandler(this.BtnSearchConnetctions_Click);
             // 
             // btnShowStationboard
             // 
@@ -66,7 +66,7 @@
             this.btnShowStationboard.TabIndex = 2;
             this.btnShowStationboard.Text = "Stationboard";
             this.btnShowStationboard.UseVisualStyleBackColor = true;
-            this.btnShowStationboard.Click += new System.EventHandler(this.btnShowStationboard_Click);
+            this.btnShowStationboard.Click += new System.EventHandler(this.BtnShowStationboard_Click);
             // 
             // fStartGUI
             // 

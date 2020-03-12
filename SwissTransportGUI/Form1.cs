@@ -19,13 +19,13 @@ namespace SwissTransportGUI
             InitializeComponent();
         }
 
-        private void btnSearchConnetctions_Click(object sender, EventArgs e)
+        private void BtnSearchConnetctions_Click(object sender, EventArgs e)
         {
             fSearchConnections searchConnections = new fSearchConnections();
             searchConnections.ShowDialog();
         }
 
-        private void btnShowStationboard_Click(object sender, EventArgs e)
+        private void BtnShowStationboard_Click(object sender, EventArgs e)
         {
             fStationboard stationboard = new fStationboard();
             stationboard.ShowDialog();

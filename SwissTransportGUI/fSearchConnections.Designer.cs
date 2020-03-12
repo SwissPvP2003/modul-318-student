@@ -116,7 +116,7 @@
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // lvConnections
             // 
@@ -184,7 +184,7 @@
             this.btnSendMail.TabIndex = 7;
             this.btnSendMail.Text = "Send Mail";
             this.btnSendMail.UseVisualStyleBackColor = true;
-            this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
+            this.btnSendMail.Click += new System.EventHandler(this.BtnSendMail_Click);
             // 
             // btnSwitchStations
             // 
@@ -194,7 +194,7 @@
             this.btnSwitchStations.TabIndex = 3;
             this.btnSwitchStations.Text = "Switch Stations";
             this.btnSwitchStations.UseVisualStyleBackColor = true;
-            this.btnSwitchStations.Click += new System.EventHandler(this.btnSwitchStations_Click);
+            this.btnSwitchStations.Click += new System.EventHandler(this.BtnSwitchStations_Click);
             // 
             // btnCancel
             // 
@@ -205,7 +205,7 @@
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // cbStationTo
             // 
@@ -214,7 +214,7 @@
             this.cbStationTo.Name = "cbStationTo";
             this.cbStationTo.Size = new System.Drawing.Size(371, 33);
             this.cbStationTo.TabIndex = 2;
-            this.cbStationTo.TextUpdate += new System.EventHandler(this.cbStationTo_TextUpdate);
+            this.cbStationTo.TextUpdate += new System.EventHandler(this.CbStationTo_TextUpdate);
             // 
             // cbStationFrom
             // 
@@ -223,7 +223,7 @@
             this.cbStationFrom.Name = "cbStationFrom";
             this.cbStationFrom.Size = new System.Drawing.Size(371, 33);
             this.cbStationFrom.TabIndex = 1;
-            this.cbStationFrom.TextUpdate += new System.EventHandler(this.dropDownComboBox1_TextUpdate);
+            this.cbStationFrom.TextUpdate += new System.EventHandler(this.CbStationFrom_TextUpdate);
             // 
             // fSearchConnections
             // 

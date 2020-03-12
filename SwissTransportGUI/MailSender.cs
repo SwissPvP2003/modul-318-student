@@ -23,7 +23,7 @@ namespace SwissTransportGUI
             set { _body = value; }
         }
 
-        public void sendMail()
+        public void SendMail()
         {
             System.Diagnostics.Process.Start(string.Format(@"mailto:?subject=" + Subject + "&body="+ Body));
         }

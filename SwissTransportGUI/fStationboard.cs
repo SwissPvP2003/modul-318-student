@@ -21,13 +21,22 @@ namespace SwissTransportGUI
             InitializeComponent();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void DropDownComboBox1_TextUpdate(object sender, EventArgs e)
         {
+            cbStation.ClearStationsNames();
+            cbStation.AddStationNames(transport);
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            StationBoardRoot stationBoardRoot;
+
             Cursor.Current = Cursors.WaitCursor;
             lvConnections.Items.Clear();
+
             if (cbStation.IsBoxFilled())
             {
-                StationBoardRoot stationBoardRoot = GetStationboard(cbStation.Text, string.Empty);
+                stationBoardRoot = GetStationboard(cbStation.Text, string.Empty);
 
                 if(stationBoardRoot.Entries.Count > 0)
                 {
@@ -42,6 +51,18 @@ namespace SwissTransportGUI
                 }
             }
         }
+        private void BtnShowMap_Click(object sender, EventArgs e)
+        {
+            if(cbStation.IsBoxFilled())
+            {
+                Station station = transport.GetStations(cbStation.Text).StationList.First();
+                Process.Start("https://www.google.com/maps/search/?api=1&query="+ station.Coordinate.XCoordinate + "," + station.Coordinate.YCoordinate);
+            }
+        }
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private StationBoardRoot GetStationboard(string station, string id)
         {
@@ -54,26 +75,6 @@ namespace SwissTransportGUI
         {
             string[] stationboardInformations = {stationBoard.Stop.Departure.TimeOfDay.ToString(), stationBoard.To, stationBoard.Category + stationBoard.Number };
             return new ListViewItem(stationboardInformations);
-        }
-
-        private void dropDownComboBox1_TextUpdate(object sender, EventArgs e)
-        {
-            cbStation.ClearStationsNames();
-            cbStation.AddStationNames(transport);
-        }
-
-        private void btnShowMap_Click(object sender, EventArgs e)
-        {
-            if(cbStation.IsBoxFilled())
-            {
-                Station station = transport.GetStations(cbStation.Text).StationList.First();
-                Process.Start("https://www.google.com/maps/search/?api=1&query="+ station.Coordinate.XCoordinate + "," + station.Coordinate.YCoordinate);
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

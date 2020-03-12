@@ -31,17 +31,15 @@ namespace SwissTransportGUI
                     foreach (Station station in transport.GetStations(Text).StationList)
                     {
                         if (station.Name != null && station.Id != null)
+                        {
                             Items.Add(station.Name);
-                    }
-                    if(Items.Count <= 0)
-                    {
-
+                        }
                     }
                 }
             }
             catch
             {
-                MessageBox.Show("Es konnte keine Verbindung zum Internet hergestellt werden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Internet Connection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

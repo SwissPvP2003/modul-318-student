@@ -20,13 +20,14 @@ namespace SwissTransportGUI
             InitializeComponent();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void BtnSearch_Click(object sender, EventArgs e)
         {
+            Connections connections;
             Cursor.Current = Cursors.WaitCursor;
             lvConnections.Items.Clear();
             if(cbStationFrom.IsBoxFilled() && cbStationTo.IsBoxFilled())
             {
-                Connections connections = GetConnections(cbStationFrom.Text, cbStationTo.Text, dtpDate.Text, dtpTime.Text);
+                connections = GetConnections(cbStationFrom.Text, cbStationTo.Text, dtpDate.Text, dtpTime.Text);
                 if(connections.ConnectionList.Count > 0)
                 {
                     foreach (Connection connection in connections.ConnectionList)
@@ -41,32 +42,19 @@ namespace SwissTransportGUI
             }
         }
 
-        private Connections GetConnections(string fromStation, string toStation, string date, string time)
-        {
-            Connections connections;
-            connections = transport.GetConnections(fromStation, toStation, date, time);
-            return connections;
-        }
-
-        private ListViewItem ConvertToListViewItem(Connection connection)
-        {
-            string[] connections = {connection.From.Departure.ToString().Substring(0, 10), connection.From.Station.Name, connection.From.Departure.ToString().Substring(11, 5), connection.To.Station.Name, connection.To.Arrival.ToString().Substring(11, 5), connection.Duration.Substring(3, 5), connection.From.Platform};
-            return new ListViewItem(connections);
-        }
-
-        private void dropDownComboBox1_TextUpdate(object sender, EventArgs e)
+        private void CbStationFrom_TextUpdate(object sender, EventArgs e)
         {
             cbStationFrom.ClearStationsNames();
             cbStationFrom.AddStationNames(transport);
         }
 
-        private void cbStationTo_TextUpdate(object sender, EventArgs e)
+        private void CbStationTo_TextUpdate(object sender, EventArgs e)
         {
             cbStationTo.ClearStationsNames();
             cbStationTo.AddStationNames(transport);
         }
 
-        private void btnSendMail_Click(object sender, EventArgs e)
+        private void BtnSendMail_Click(object sender, EventArgs e)
         {
             MailSender mailSender = new MailSender();
             mailSender.Subject = "Fahrplan";
@@ -77,19 +65,31 @@ namespace SwissTransportGUI
                     mailSender.Body += subItem.Text + " ";
                 }
             }
-            mailSender.sendMail();
+            mailSender.SendMail();
         }
 
-        private void btnSwitchStations_Click(object sender, EventArgs e)
+        private void BtnSwitchStations_Click(object sender, EventArgs e)
         {
             string station = cbStationFrom.Text;
             cbStationFrom.Text = cbStationTo.Text;
             cbStationTo.Text = station;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private Connections GetConnections(string fromStation, string toStation, string date, string time)
+        {
+            Connections connections;
+            connections = transport.GetConnections(fromStation, toStation, date, time);
+            return connections;
+        }
+        private ListViewItem ConvertToListViewItem(Connection connection)
+        {
+            string[] connections = {connection.From.Departure.ToString().Substring(0, 10), connection.From.Station.Name, connection.From.Departure.ToString().Substring(11, 5), connection.To.Station.Name, connection.To.Arrival.ToString().Substring(11, 5), connection.Duration.Substring(3, 5), connection.From.Platform};
+            return new ListViewItem(connections);
         }
 
     }
