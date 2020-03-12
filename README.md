@@ -181,7 +181,7 @@ varOne = 0
 }
 ```
 
-Lokale variablen unterhalb des Methodenkopfes definieren und deklariere
+Lokale variablen unterhalb des Methodenkopfes definieren
 
 ```csharp 
  Methode() {
