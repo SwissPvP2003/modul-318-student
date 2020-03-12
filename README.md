@@ -10,9 +10,9 @@
 * [Bugs](#bugs)  
 * [Planung](#planung)
   * [Usecases](#usecases)
-  * [UseCase Diagram](#udiagram)
-  * [Aktiviäts Diagramm](#adiagram)
-  * [Mockups](#mokups)
+  * [UseCase Diagram](#udiagramm)
+  * [Aktiviäts Diagramm](#adiagramm)
+  * [Mockups](#mockups)
 * [Programmierrichtlinen](#programmierrichtlinen)
   * [Namensgebung](#namensgebung)
   * [Deklaration](#deklaration)
@@ -136,8 +136,6 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 ---
 
 ![Mockup](/img/Mockup3.png)
-
----
 
 <a name="programmierrichtlinen"/>
 
