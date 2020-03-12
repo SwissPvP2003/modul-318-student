@@ -1,6 +1,8 @@
 # M318 SwissTransport API
 ## Inhaltsverzeichnis
 * [Einleitung](#einleitung)
+  * [Autor](#autor)
+  * [Projekt](#projekt)
   * [Aufgabenstellung](#aufgabenstellung)
   * [Anforderung](#anforderung) 
   * [Zweck](#zweck) 
@@ -21,6 +23,19 @@
 <a name="einleitung"/>
 
 ## Einleitung
+
+<a name="autor"/>
+
+### Autor und Dokument
+* Autor: **Noah Ziltener**
+* Erstelldatum: **04.03.2020**
+* letzte Aktualisierung: **12.03.2020**
+
+<a name="projekt"/>
+
+### Projekt
+* Projektstart: **18.04.2018**   
+* Projektende: **24.04.2018** 
 
 <a name="aufgabenstellung"/>
 
