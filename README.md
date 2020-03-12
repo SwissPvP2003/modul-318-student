@@ -237,6 +237,8 @@ while (x == y)
 | 2       | Ich gebe "luz" in die "From", "To" oder "Station" Textbox ein. | Es werden alle Haltestellen die mit Luzern anfgagen angezeigt |
 | 3       | Ich wähle das oberste Resultat aus | Der Stationsname wird in die Textbox eingefühlt |
 
+---
+
 #### Verbindung suchen
 
 **Vorbedingung** Verbindungssuche ist geöffnet & Internetverbindung
@@ -251,6 +253,8 @@ while (x == y)
 | 2       | Ich gebe "Sursee" in die "To" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben |
 | 3       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben |
 
+---
+
 #### Stationboard
 
 **Vorbedingung** Staionboard ist geöffnet & Internetverbindung
@@ -263,6 +267,8 @@ while (x == y)
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
 | 1       | Ich gebe "Luzern" in die "Station" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
 | 2       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten Verbindungen von Luzern in alle Richtungen angezeigt |
+
+---
 
 #### Verbindung suchen mit Datum und Zeit
 
@@ -280,6 +286,8 @@ while (x == y)
 | 4       | Ich gebe die Zeit "16:00" in die Zeit Textbox ein| Die zeit steht im richtigen Format in der Textbox|
 | 4       | Ich klicke auf den Button "Search" | Es wird eine Liste mit 4 Verbindungen ausgegeben die Morgen um 16:00 in Luzern abfahren| |
 
+---
+
 #### Karte
 
 **Vorbedingung**  Staionboard ist geöffnet & Internetverbindung
@@ -292,6 +300,8 @@ while (x == y)
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
 | 1       | Ich gebe "Luzern" in die "Station" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
 | 2       | Ich klicke auf den Button "Show Map" | Es öffnet sich ein Browser Fenster mit Googlemaps. Luzern ist auf der Karte makiert |
+
+---
 
 #### Mail
 
