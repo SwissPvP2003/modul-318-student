@@ -7,7 +7,6 @@
   * [Anforderung](#anforderung) 
   * [Zweck](#zweck) 
 * [Funktionen](#funktionen)
-* [Bugs](#bugs)  
 * [Planung](#planung)
   * [Usecases](#usecases)
   * [UseCase Diagram](#udiagramm)
