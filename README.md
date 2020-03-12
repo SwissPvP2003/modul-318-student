@@ -336,3 +336,5 @@ while (x == y)
 <a name="installationanleitung"/>
 
 ## Installation Anleitung
+
+**https://github.com/SwissPvP2003/modul-318-student/tree/master/download/SetupSwissTransportAPI.msi?raw=true** 
