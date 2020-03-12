@@ -19,7 +19,7 @@
   * [Kommentare](#kommentare)
   * [Methoden, Schleifen, Verzweigungen, Try Catch](#methoden)
 * [Testing](#testing)
-  * [Testfälle](#testfälle)
+  * [Testfälle](#testfaelle)
   * [Testprotokoll](#testprotokoll)
 * [Installation Anleitung](#installationanleitung) 
 
@@ -67,6 +67,17 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 <a name="funktionen"/>
 
 ## Funktionen
+In der Tabele ist ersichtlich welche Funktionen umgesetz wurden und welche nicht.
+| Anforderung | Priorität | Status | Beschreibung                      |
+| ----------- | --------- | ------ | --------------------------------- | 
+| A01         | 1         | ✅      | Während der Eingabe einer Station werden Vorschläge in einem Dropdown angezeigt | 
+| A02         | 1         | ✅      | Verbindungsseite: Mit Verbindung suchen werden die nächsten Verbindungen anhand der Angaben gesucht und angezeigt | 
+| A03         | 1         | ✅      | Abfahrtsplansseite: Mit Abfahrtsplan anzeigen werden die nächste Abfahrten ab der eingegebenen Station gesucht und angezeigt | 
+| A04         | 2         | ✅      | Während der Eingabe einer Station werden Vorschläge in einem Dropdown angezeigt | 
+| A05         | 2         | ✅      | Der User kann ein belibiges Datum und Zeitpunkt eingeben|
+| A06         | 3         | ✅      | Wenn eine Station im Stationboard eingegeben wird und der Button Auf Karte anzeigen gedrückt wird öffnet sich ein Browser mit Google Maps|  
+| A07         | 3         | ❌      | Wurde nicht umgesetzt|  
+| A08         | 3         | ✅      | Belibiges Mailprogramm wird mit Resultaten aus Verbindungs Suche geöffnet |
 
 <a name="bugs"/>
 
@@ -208,9 +219,92 @@ while (x == y)
 
 ## Testing
 
-<a name="testfälle"/>
+<a name="testfaelle"/>
 
 ### Testfälle
+
+#### Station suchen
+
+**Vorbedingung** Stationboard oder Verbindungssuche ist geöffnet 
+
+**Anforderung** A001 & A004
+
+**Testszenario**
+
+| Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
+| ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
+| 1       | Ich gebe "lu" in die "From", "To" oder "Station" Textbox ein.| Es werden keine Vorschlähge angezeigt |
+| 2       | Ich gebe "luz" in die "From", "To" oder "Station" Textbox ein. | Es werden alle Haltestellen die mit Luzern anfgagen angezeigt |
+| 3       | Ich wähle das oberste Resultat aus | Der Stationsname wird in die Textbox eingefühlt |
+
+### Testfälle
+
+#### Verbindung suchen
+
+**Vorbedingung** Verbindungssuche ist geöffnet 
+
+**Anforderung** A002
+
+**Testszenario**
+
+| Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
+| ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
+| 1       | Ich gebe "Luzern" in die "From" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
+| 2       | Ich gebe "Sursee" in die "To" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben |
+| 3       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben |
+
+#### Stationboard
+
+**Vorbedingung** Staionboard ist geöffnet 
+
+**Anforderung** A003
+
+**Testszenario**
+
+| Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
+| ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
+| 1       | Ich gebe "Luzern" in die "Station" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
+| 2       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten Verbindungen von Luzern in alle Richtungen angezeigt |
+
+#### Verbindung suchen
+
+**Vorbedingung** Staionboard ist geöffnet 
+
+**Anforderung** A005
+
+**Testszenario**
+
+| Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
+| ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
+| 1       | Ich gebe "Luzern" in die "From" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
+| 2       | Ich gebe "Sursee" in die "To" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben |
+| 3       | Ich gebe das Datum von Morgen über den Datepicker ein| Datum von Morgen steht im richtigen Format in Textbox |
+| 4       | Ich gebe die Zeit "16:00" in die Zeit Textbox ein| Die zeit steht im richtigen Format in der Textbox|
+| 4       | Ich klicke auf den Button "Search" | Es wird eine Liste mit 4 Verbindungen ausgegeben die Morgen um 16:00 in Luzern abfahren| |
+
+**Vorbedingung**  Karte
+
+**Anforderung** A006
+
+**Testszenario**
+
+| Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
+| ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
+| 1       | Ich gebe "Luzern" in die "Station" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
+| 2       | Ich klicke auf den Button "Show Map" | Es öffnet sich ein Browser Fenster mit Googlemaps. Luzern ist auf der Karte makiert |
+
+**Vorbedingung**  Mail
+
+**Anforderung** A008
+
+**Testszenario**
+
+| Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
+| ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
+| 1       | Ich gebe "Luzern" in die "From" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
+| 2       | Ich gebe "Sursee" in die "To" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben |
+| 3       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben |
+| 4       |Ich klicke auf den Button "Send Mail" | Es öffnet sich ein Mailprogramm und im Email Body sind alle Informationen aus der Ausgabetabel eingefüght|
 
 <a name="testprotokoll"/>
 
