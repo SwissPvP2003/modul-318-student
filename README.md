@@ -102,7 +102,7 @@ Meine eigene Idee war bei der Verbindungssuche ein Button einzubauen. Der Button
 #### VERBINDUNGEN ANZEIGEN
 | USE CASE |          |
 | ---------|----------|
-|BESCHREIBUNG|Dem User werden die nächsten 4 Verbindungen zwischen der Start- und End-Station angezeigt|
+|BESCHREIBUNG|Dem User werden die nächsten 4 Verbindungen zwischen der Start- und End-Station angezeigt.|
 |AKTEUR|SBB User|
 |AUSLÖSER|SBB User möchte, die wissen was die besten Verbindungen zwischen den eingegebenen Stationen wissen.|
 |ABLAUF| <ol><li>User öffnet Programm</li><li>User klickt entweder auf «Verbindungen anzeigen»</li><li>User gibt Namen von Start- und Endstation ein.</li><li>User klickt auf Verbindungen anzeigen</li><li>User bekommt Liste mit den 5 nächsten Verbindungen zwischen den 2 Stationen angezeigt.</li></ol> |
@@ -111,7 +111,7 @@ Meine eigene Idee war bei der Verbindungssuche ein Button einzubauen. Der Button
 #### ABFAHRTSTAFEL
 | USE CASE |          |
 | ---------|----------|
-|BESCHREIBUNG|Dem User werden alle Anschlussmöglichkeiten einer Station angezeigt. Es sollen alle Verbindungen, egal in welche Richtung, welche an dieser Station anhalten angezeigt werden|
+|BESCHREIBUNG|Dem User werden alle Anschlussmöglichkeiten einer Station angezeigt. Es sollen alle Verbindungen, egal in welche Richtung, welche an dieser Station anhalten angezeigt werden.|
 |AKTEUR|SBB User|
 |AUSLÖSER|SBB User möchte alle Verbindungen einer Station in alle Richtungen wissen.|
 |VOBEDINGUNGEN|Internetverbindung|
@@ -139,19 +139,19 @@ Dieses Diagramm zeigt wie die Funktionen des Programm bedient werden.
 ### Mockups
 
 #### Stationboard
-Das Mockup zeigt wie das GUI zum Stationboard aussehen sollte
+Das Mockup zeigt wie das GUI zum Stationboard aussehen sollte.
 ![Mockup](/img/Mockup1.png)
 
 ---
 
 #### Menu
-Die Grafik zeigt den Startpunkt der Applikation
+Die Grafik zeigt den Startpunkt der Applikation.
 ![Mockup](/img/Mockup2.png)
 
 ---
 
 #### Search Connections
-Das Mockup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte
+Das Mockup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte.
 ![Mockup](/img/Mockup3.png)
 
 <a name="programmierrichtlinen"/>
@@ -163,7 +163,7 @@ Das Mockup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte
 ### Namensgebung
 | Stelle | Regel  | Beispiel                |
 |--------|--------|-------------------------|
-|Allgemein|Englische Bezeichnungen, aussagen was für Zweck sie haben.| |
+|Allgemein|Englische Bezeichnungen| |
 |Variabel|CamelCase|```int numberOfConnections; ```|
 |Methoden|PascalCase| ```AreStationFieldsFilled()```|
 |Klassen|Gross|```Station```|
@@ -172,7 +172,7 @@ Das Mockup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte
 <a name="Deklaration"/>
 
 ### Deklaration
-Globale Variablen unterhalb des Klassenkopfes definieren und im Konstruktor deklarieren
+Globale Variablen unterhalb des Klassenkopfes definieren und im Konstruktor deklarieren.
 ```csharp 
 int varOne;
 Konstruktor() 
@@ -181,7 +181,7 @@ varOne = 0
 }
 ```
 
-Lokale variablen unterhalb des Methodenkopfes definieren
+Lokale variablen unterhalb des Methodenkopfes definieren.
 
 ```csharp 
  Methode() 
@@ -207,7 +207,7 @@ while (x == y)
  <a name="methoden"/>
  
 ### Methoden, Schleifen, Verzweigungen, Try Catch
-Allman, Klammern immer auf neu Line bei Statements
+Allman, Klammern immer auf neu Line bei Statements.
 
 ```csharp
 while (x == y)
@@ -226,7 +226,7 @@ while (x == y)
 
 #### Station suchen
 
-**Vorbedingung** Stationboard oder Verbindungssuche ist geöffnet & Internetverbindung
+**Vorbedingung** Stationboard oder Verbindungssuche ist geöffnet & Internetverbindung.
 
 **Anforderung** A001 & A004
 
@@ -234,15 +234,15 @@ while (x == y)
 
 | Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
-| 1       | Ich gebe "lu" in die "From", "To" oder "Station" Textbox ein.| Es werden keine Vorschlähge angezeigt |
-| 2       | Ich gebe "luz" in die "From", "To" oder "Station" Textbox ein. | Es werden alle Haltestellen die mit Luzern anfgagen angezeigt (Luzern, Luzern Bahnhof, Luzern Kantonalbank, Luzern Pilatusplatz, Luzern,Schwanenpaltz, LuzernLuzernerhof, Luzern Allmend/Messe, Luzern Gütsch, LuzernKassernenplatz, Luzern Eichhof) |
-| 3       | Ich wähle "Luzern" aus der Liste aus | Der Stationsname wird in die Textbox eingefühlt |
+| 1       | Ich gebe "lu" in die "From", "To" oder "Station" Textbox ein.| Es werden keine Vorschlähge angezeigt. |
+| 2       | Ich gebe "luz" in die "From", "To" oder "Station" Textbox ein. | Es werden alle Haltestellen die mit Luzern anfgagen angezeigt (Luzern, Luzern Bahnhof, Luzern Kantonalbank, Luzern Pilatusplatz, Luzern,Schwanenpaltz, LuzernLuzernerhof, Luzern Allmend/Messe, Luzern Gütsch, LuzernKassernenplatz, Luzern Eichhof). |
+| 3       | Ich wähle "Luzern" aus der Liste aus. | Der Stationsname wird in die Textbox eingefühlt. |
 
 ---
 
 #### Verbindung suchen
 
-**Vorbedingung** Verbindungssuche ist geöffnet & Internetverbindung
+**Vorbedingung** Verbindungssuche ist geöffnet & Internetverbindung.
 
 **Anforderung** A002
 
@@ -250,15 +250,15 @@ while (x == y)
 
 | Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
-| 1       | Ich gebe "Luzern" in die "From" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
-| 2       | Ich gebe "Sursee" in die "To" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben |
-| 3       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben. je nach Zeit und Datum können diese unterschidlich sein |
+| 1       | Ich gebe "Luzern" in die "From" Textbox ein. | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben. |
+| 2       | Ich gebe "Sursee" in die "To" Textbox ein. | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben. |
+| 3       | Ich klicke auf den Button "Search" .| Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben. je nach Zeit und Datum können diese unterschidlich sein. |
 
 ---
 
 #### Stationboard
 
-**Vorbedingung** Staionboard ist geöffnet & Internetverbindung
+**Vorbedingung** Staionboard ist geöffnet & Internetverbindung.
 
 **Anforderung** A003
 
@@ -266,14 +266,14 @@ while (x == y)
 
 | Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
-| 1       | Ich gebe "Luzern" in die "Station" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
-| 2       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten Verbindungen von Luzern in alle Richtungen angezeigt |
+| 1       | Ich gebe "Luzern" in die "Station" Textbox ein. | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben. |
+| 2       | Ich klicke auf den Button "Search".| Es wird eine Liste mit den nächsten Verbindungen von Luzern in alle Richtungen angezeigt.|
 
 ---
 
 #### Verbindung suchen mit Datum und Zeit
 
-**Vorbedingung** Verbindungssuche ist geöffnet & Internetverbindung
+**Vorbedingung** Verbindungssuche ist geöffnet & Internetverbindung.
 
 **Anforderung** A005
 
@@ -281,17 +281,17 @@ while (x == y)
 
 | Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
-| 1       | Ich gebe "Luzern" in die "From" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
-| 2       | Ich gebe "Sursee" in die "To" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben |
-| 3       | Ich gebe das Datum von Morgen über den Datepicker ein| Datum von Morgen steht im richtigen Format in Textbox |
-| 4       | Ich gebe die Zeit "16:00" in die Zeit Textbox ein| Die zeit steht im richtigen Format in der Textbox|
-| 4       | Ich klicke auf den Button "Search" | Es wird eine Liste mit 4 Verbindungen ausgegeben die Morgen um 16:00 in Luzern abfahren| |
+| 1       | Ich gebe "Luzern" in die "From" Textbox ein. | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben. |
+| 2       | Ich gebe "Sursee" in die "To" Textbox ein. | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben. |
+| 3       | Ich gebe das Datum von Morgen über den Datepicker ein.| Datum von Morgen steht im richtigen Format in Textbox. |
+| 4       | Ich gebe die Zeit "16:00" in die Zeit Textbox ein.| Die zeit steht im richtigen Format in der Textbox.|
+| 4       | Ich klicke auf den Button "Search". | Es wird eine Liste mit 4 Verbindungen ausgegeben die Morgen um 16:00 in Luzern abfahren.|
 
 ---
 
 #### Karte
 
-**Vorbedingung**  Staionboard ist geöffnet & Internetverbindung
+**Vorbedingung**  Staionboard ist geöffnet & Internetverbindung.
 
 **Anforderung** A006
 
@@ -299,14 +299,14 @@ while (x == y)
 
 | Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
-| 1       | Ich gebe "Luzern" in die "Station" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
-| 2       | Ich klicke auf den Button "Show Map" | Es öffnet sich ein Browser Fenster mit Googlemaps. Luzern ist auf der Karte makiert |
+| 1       | Ich gebe "Luzern" in die "Station" Textbox ein. | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben. |
+| 2       | Ich klicke auf den Button "Show Map". | Es öffnet sich ein Browser Fenster mit Googlemaps. Luzern ist auf der Karte makiert. |
 
 ---
 
 #### Mail
 
-**Vorbedingung**  Verbindungssuche ist geöffnet  & Internetverbindung
+**Vorbedingung**  Verbindungssuche ist geöffnet  & Internetverbindung.
 
 **Anforderung** A008
 
@@ -314,10 +314,10 @@ while (x == y)
 
 | Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
-| 1       | Ich gebe "Luzern" in die "From" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
-| 2       | Ich gebe "Sursee" in die "To" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben |
-| 3       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben |
-| 4       |Ich klicke auf den Button "Send Mail" | Es öffnet sich ein Mailprogramm und im Email Body sind alle Informationen aus der Ausgabetabel eingefüght|
+| 1       | Ich gebe "Luzern" in die "From" Textbox ein. | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben. |
+| 2       | Ich gebe "Sursee" in die "To" Textbox ein. | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben. |
+| 3       | Ich klicke auf den Button "Search". | Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben.|
+| 4       |Ich klicke auf den Button "Send Mail". | Es öffnet sich ein Mailprogramm und im Email Body sind alle Informationen aus der Ausgabetabel eingefüght.|
 
 <a name="testprotokoll"/>
 
@@ -336,12 +336,12 @@ while (x == y)
 
 ## Installation Anleitung
 
-Die Setupdatei kann direkt unter diesem Link heruntergeladen werden
+Die Setupdatei kann direkt unter diesem Link heruntergeladen werden:
 **https://github.com/SwissPvP2003/modul-318-student/tree/master/download/SetupSwissTransportAPI.msi** 
 
 Gehe in den Downloads Ordner oder führe die Setupdatei **SetupSwissTransportAPI.msi** direkt vom Browser aus aus. Falls eine Meldung eingeblendet wird, dass der Computer durch Windows geschütz wurde, klicke auf **Weitere Informationen** und **Trotzdem ausführen**, um mit der Installation zu beginnen.
 
-Klicke auf **Next**
+Klicke auf **Next**.
 
 Das Programm wird dan Standartmässing im Programm Files Order installiert. Der Ort kann aber geändert werden.
 
