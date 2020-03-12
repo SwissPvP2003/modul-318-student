@@ -10,6 +10,9 @@
 * [Bugs](#bugs)  
 * [Planung](#planung)
   * [Usecases](#usecases)
+  * [UseCase Diagram](#udiagram)
+  * [Aktiviäts Diagramm](#adiagram)
+  * [Mockups](#mokups)
 * [Programmierrichtlinen](#programmierrichtlinen)
   * [Namensgebung](#namensgebung)
   * [Deklaration](#deklaration)
@@ -106,9 +109,35 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 |ABLAUF| <ol><li>User öffnet Programm</li><li>User klickt entweder auf «Abfahrstafel»</li><li>User gibt Namen von Startstation ein.</li><li>User klickt auf Abfahrstafel anzeigen</li><li>User bekommt Liste mit den nächsten Verbindungen die von der eingegeben Stationen ausgehen angezeigt.</li></ol> |
 |ERGEBNIS|User bekommt Liste mit den nächsten Verbindungen die von der eingegeben Stationen ausgehen angezeigt. Die Tafel funktioniert genauso wie die Tafel die an den Bahnhöfen stehen.|
 
-#### Bild
+<a name="udiagramm"/>
 
-![Use Case](/doc/UseCase.png)
+#### UseCase Diagram
+
+![Use Case](/img/UseCase.png)
+
+<a name="adiagramm"/>
+
+### Aktiviäts Diagramm
+
+![Aktiviäts Diagramm](/img/Aktivität.png)
+
+---
+
+<a name="mockups"/>
+
+### Mockups
+
+![Mockup](/img/Mockup1.png)
+
+---
+
+![Mockup](/img/Mockup2.png)
+
+---
+
+![Mockup](/img/Mockup3.png)
+
+---
 
 <a name="programmierrichtlinen"/>
 
