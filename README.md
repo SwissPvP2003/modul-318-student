@@ -79,6 +79,8 @@ In der Tabele ist ersichtlich welche Funktionen umgesetz wurden und welche nicht
 | A07         | 3         | ❌      | Wurde nicht umgesetzt|  
 | A08         | 3         | ✅      | Belibiges Mailprogramm wird mit Resultaten aus Verbindungs Suche geöffnet |
 
+Meine eigene Idee war bei der Verbindungssuche ein Button einzubauen. Der Button den Inhalt der beiden Textboxen.
+
 <a name="planung"/>
 
 ## Planung
