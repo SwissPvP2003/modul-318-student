@@ -165,7 +165,7 @@ Das Mokup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte
 | Stelle | Regel  | Beispiel                |
 |--------|--------|-------------------------|
 |Allgemein|Englische Bezeichnungen, aussagen was für Zweck sie haben.| |
-|Variabel|CamelCase, Lokale und Membervariabel werden nicht unterschieden.|```int numberOfConnections; ```|
+|Variabel|CamelCase|```int numberOfConnections; ```|
 |Methoden|PascalCase| ```AreStationFieldsFilled()```|
 |Klassen|Gross|```Station```|
 |GUI|Fängt mit Kürzel von GUI-Element an.|```btnSearchConnections```|
@@ -176,7 +176,8 @@ Das Mokup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte
 Globale Variablen unterhalb des Klassenkopfes definieren und im Konstruktor deklarieren
 ```csharp 
 int varOne;
-Konstruktor() { 
+Konstruktor() 
+{ 
 varOne = 0 
 }
 ```
@@ -184,9 +185,10 @@ varOne = 0
 Lokale variablen unterhalb des Methodenkopfes definieren
 
 ```csharp 
- Methode() {
+ Methode() 
+ {
   int varOne = 0;
-}
+ }
 ```
 
 <a name="kommentare"/>
