@@ -28,14 +28,14 @@
 
 ### Autor und Dokument
 * Autor: **Noah Ziltener**
-* Erstelldatum: **04.03.2020**
+* Erstelldatum: **10.03.2020**
 * letzte Aktualisierung: **12.03.2020**
 
 <a name="projekt"/>
 
 ### Projekt
-* Projektstart: **18.04.2018**   
-* Projektende: **24.04.2018** 
+* Projektstart: **10.03.2020**   
+* Projektende: **12.03.2020** 
 
 <a name="aufgabenstellung"/>
 
