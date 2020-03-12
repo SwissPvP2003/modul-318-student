@@ -1,6 +1,6 @@
 ﻿namespace SwissTransportGUI
 {
-    partial class fSearchConnections
+    partial class SearchConnections
     {
         /// <summary>
         /// Required designer variable.
@@ -202,7 +202,7 @@
             this.btnCancel.Location = new System.Drawing.Point(1315, 12);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 65);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -227,6 +227,7 @@
             // 
             // fSearchConnections
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1436, 1029);

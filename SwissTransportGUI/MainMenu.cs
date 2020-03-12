@@ -12,23 +12,23 @@ using System.Windows.Forms;
 
 namespace SwissTransportGUI
 {
-    public partial class fStartGUI : Form
+    public partial class MainMenu : Form
     {
-        public fStartGUI()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
         private void BtnSearchConnetctions_Click(object sender, EventArgs e)
         {
-            fSearchConnections searchConnections = new fSearchConnections();
-            searchConnections.ShowDialog();
+            SearchConnections fSearchConnections = new SearchConnections();
+            fSearchConnections.ShowDialog();
         }
 
         private void BtnShowStationboard_Click(object sender, EventArgs e)
         {
-            fStationboard stationboard = new fStationboard();
-            stationboard.ShowDialog();
+            Stationboard fStationboard = new Stationboard();
+            fStationboard.ShowDialog();
         }
     }
 }

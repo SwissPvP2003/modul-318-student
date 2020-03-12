@@ -12,16 +12,15 @@ using System.Windows.Forms;
 
 namespace SwissTransportGUI
 {
-    public partial class fStationboard : Form
+    public partial class Stationboard : Form
     {
         readonly Transport transport = new Transport();
-
-        public fStationboard()
+        public Stationboard()
         {
             InitializeComponent();
         }
 
-        private void DropDownComboBox1_TextUpdate(object sender, EventArgs e)
+        private void CbStation_TextUpdate(object sender, EventArgs e)
         {
             cbStation.ClearStationsNames();
             cbStation.AddStationNames(transport);

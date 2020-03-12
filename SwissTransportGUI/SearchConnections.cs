@@ -11,11 +11,10 @@ using System.Windows.Forms;
 
 namespace SwissTransportGUI
 {
-    public partial class fSearchConnections : Form
+    public partial class SearchConnections : Form
     {
         readonly Transport transport = new Transport();
-
-        public fSearchConnections()
+        public SearchConnections()
         {
             InitializeComponent();
         }
@@ -23,11 +22,14 @@ namespace SwissTransportGUI
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             Connections connections;
+
             Cursor.Current = Cursors.WaitCursor;
             lvConnections.Items.Clear();
+
             if(cbStationFrom.IsBoxFilled() && cbStationTo.IsBoxFilled())
             {
                 connections = GetConnections(cbStationFrom.Text, cbStationTo.Text, dtpDate.Text, dtpTime.Text);
+
                 if(connections.ConnectionList.Count > 0)
                 {
                     foreach (Connection connection in connections.ConnectionList)
@@ -57,7 +59,9 @@ namespace SwissTransportGUI
         private void BtnSendMail_Click(object sender, EventArgs e)
         {
             MailSender mailSender = new MailSender();
+
             mailSender.Subject = "Fahrplan";
+
             foreach(ListViewItem connection in lvConnections.Items)
             {
                 foreach(ListViewItem.ListViewSubItem subItem in connection.SubItems)
@@ -86,11 +90,11 @@ namespace SwissTransportGUI
             connections = transport.GetConnections(fromStation, toStation, date, time);
             return connections;
         }
+
         private ListViewItem ConvertToListViewItem(Connection connection)
         {
             string[] connections = {connection.From.Departure.ToString().Substring(0, 10), connection.From.Station.Name, connection.From.Departure.ToString().Substring(11, 5), connection.To.Station.Name, connection.To.Arrival.ToString().Substring(11, 5), connection.Duration.Substring(3, 5), connection.From.Platform};
             return new ListViewItem(connections);
         }
-
     }
 }

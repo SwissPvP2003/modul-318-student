@@ -1,6 +1,6 @@
 ﻿namespace SwissTransportGUI
 {
-    partial class fStationboard
+    partial class Stationboard
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,9 @@
             this.cDepartureTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cDestination = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cDesignation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cbStation = new SwissTransportGUI.DropDownComboBox();
             this.btnShowMap = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cbStation = new SwissTransportGUI.DropDownComboBox();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -102,15 +102,6 @@
             this.cDesignation.Text = "Designation";
             this.cDesignation.Width = 200;
             // 
-            // cbStation
-            // 
-            this.cbStation.FormattingEnabled = true;
-            this.cbStation.Location = new System.Drawing.Point(12, 98);
-            this.cbStation.Name = "cbStation";
-            this.cbStation.Size = new System.Drawing.Size(383, 33);
-            this.cbStation.TabIndex = 1;
-            this.cbStation.TextUpdate += new System.EventHandler(this.DropDownComboBox1_TextUpdate);
-            // 
             // btnShowMap
             // 
             this.btnShowMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -134,8 +125,18 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
+            // cbStation
+            // 
+            this.cbStation.FormattingEnabled = true;
+            this.cbStation.Location = new System.Drawing.Point(12, 98);
+            this.cbStation.Name = "cbStation";
+            this.cbStation.Size = new System.Drawing.Size(383, 33);
+            this.cbStation.TabIndex = 1;
+            this.cbStation.TextUpdate += new System.EventHandler(this.CbStation_TextUpdate);
+            // 
             // fStationboard
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1436, 1029);

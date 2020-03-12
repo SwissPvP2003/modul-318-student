@@ -1,6 +1,6 @@
 ﻿namespace SwissTransportGUI
 {
-    partial class fStartGUI
+    partial class MainMenu
     {
         /// <summary>
         /// Erforderliche Designervariable.
