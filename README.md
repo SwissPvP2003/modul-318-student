@@ -118,6 +118,7 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 <a name="adiagramm"/>
 
 ### Aktiviäts Diagramm
+Dieses Diagramm zeigt wie die Funktionen des Programm bedient werden.
 
 ![Aktiviäts Diagramm](/img/Aktivität.png)
 
@@ -127,14 +128,20 @@ Die Dokumentation dient dazu die Projektarbeit im Rahmen des ÜK 318 zu dokument
 
 ### Mockups
 
+#### Stationboard
+Das Mokup zeigt wie das GUI zum Stationboard aussehen sollte
 ![Mockup](/img/Mockup1.png)
 
 ---
 
+#### Menu
+Die Grafik zeigt den Startpunkt der Applikation
 ![Mockup](/img/Mockup2.png)
 
 ---
 
+#### Search Connections
+Das Mokup zeigt wie der User Oberfläche der Verbindungssuche aussehen sollte
 ![Mockup](/img/Mockup3.png)
 
 <a name="programmierrichtlinen"/>
