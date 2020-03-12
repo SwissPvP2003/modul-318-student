@@ -337,4 +337,17 @@ while (x == y)
 
 ## Installation Anleitung
 
+Die Setupdatei kann direkt unter diesem Link heruntergeladen werden
 **https://raw.github.com/SwissPvP2003/modul-318-student/tree/master/download/SetupSwissTransportAPI.msi** 
+
+Gehe in den Downloads Ordner oder führe die Setupdatei **SetupSwissTransportAPI.msi** direkt vom Browser aus aus. Falls eine Meldung eingeblendet wird, dass der Computer durch Windows geschütz wurde, klicke auf **Weitere Informationen** und **Trotzdem ausführen**, um mit der Installation zu beginnen.
+
+Klicke auf **Next**
+
+Das Programm wird dan Standartmässing im Programm Files Order installiert. Der Ort kann aber geändert werden.
+
+Klicke auf **Next** um die Anwendung zu Installieren.
+
+Die Setup Datei kann auch dazu verwendet werden um das Programm zu **Deintallieren** und zu **reparieren**.
+
+
