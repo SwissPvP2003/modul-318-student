@@ -236,8 +236,8 @@ while (x == y)
 | Schritt | Aktivität                                                     | Erwartetes Resultat                                      |
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
 | 1       | Ich gebe "lu" in die "From", "To" oder "Station" Textbox ein.| Es werden keine Vorschlähge angezeigt |
-| 2       | Ich gebe "luz" in die "From", "To" oder "Station" Textbox ein. | Es werden alle Haltestellen die mit Luzern anfgagen angezeigt |
-| 3       | Ich wähle das oberste Resultat aus | Der Stationsname wird in die Textbox eingefühlt |
+| 2       | Ich gebe "luz" in die "From", "To" oder "Station" Textbox ein. | Es werden alle Haltestellen die mit Luzern anfgagen angezeigt (Luzern, Luzern Bahnhof, Luzern Kantonalbank, Luzern Pilatusplatz, Luzern,Schwanenpaltz, LuzernLuzernerhof, Luzern Allmend/Messe, Luzern Gütsch, LuzernKassernenplatz, Luzern Eichhof) |
+| 3       | Ich wähle "Luzern" aus der Liste aus | Der Stationsname wird in die Textbox eingefühlt |
 
 ---
 
@@ -253,7 +253,7 @@ while (x == y)
 | ------- | ------------------------------------------------------------- | -------------------------------------------------------- | 
 | 1       | Ich gebe "Luzern" in die "From" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
 | 2       | Ich gebe "Sursee" in die "To" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Sursee in Namen haben |
-| 3       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben |
+| 3       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten 4 Verbindungen ausgegeben. je nach Zeit und Datum können diese unterschidlich sein |
 
 ---
 
@@ -274,7 +274,7 @@ while (x == y)
 
 #### Verbindung suchen mit Datum und Zeit
 
-**Vorbedingung** Staionboard ist geöffnet & Internetverbindung
+**Vorbedingung** Verbindungssuche ist geöffnet & Internetverbindung
 
 **Anforderung** A005
 
@@ -323,6 +323,15 @@ while (x == y)
 <a name="testprotokoll"/>
 
 ### Testprotokoll
+
+| Test | Testperson | Datum | Status|
+| ----------- | --------- | ------ | --------------------------------- | 
+| Station suchen | Nick Durrer| 12.03.2020 | ✅  | 
+| Verbindung suchen| Nick Durrer| 12.03.2020 | ✅ | 
+| Stationboard| Nick Durrer| 12.03.2020| ✅  | 
+| Verbindung suchen mit Datum und Zeit| Nick Durrer| 12.03.2020 | ✅  | 
+| Karte |Nick Durrer| 12.03.2020 |✅ |
+| Mail    | Nick Durrer|12.03.2020|✅ |  
 
 <a name="installationanleitung"/>
 
