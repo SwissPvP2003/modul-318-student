@@ -225,7 +225,7 @@ while (x == y)
 
 #### Station suchen
 
-**Vorbedingung** Stationboard oder Verbindungssuche ist geöffnet 
+**Vorbedingung** Stationboard oder Verbindungssuche ist geöffnet & Internetverbindung
 
 **Anforderung** A001 & A004
 
@@ -241,7 +241,7 @@ while (x == y)
 
 #### Verbindung suchen
 
-**Vorbedingung** Verbindungssuche ist geöffnet 
+**Vorbedingung** Verbindungssuche ist geöffnet & Internetverbindung
 
 **Anforderung** A002
 
@@ -255,7 +255,7 @@ while (x == y)
 
 #### Stationboard
 
-**Vorbedingung** Staionboard ist geöffnet 
+**Vorbedingung** Staionboard ist geöffnet & Internetverbindung
 
 **Anforderung** A003
 
@@ -268,7 +268,7 @@ while (x == y)
 
 #### Verbindung suchen
 
-**Vorbedingung** Staionboard ist geöffnet 
+**Vorbedingung** Staionboard ist geöffnet & Internetverbindung
 
 **Anforderung** A005
 
@@ -282,7 +282,9 @@ while (x == y)
 | 4       | Ich gebe die Zeit "16:00" in die Zeit Textbox ein| Die zeit steht im richtigen Format in der Textbox|
 | 4       | Ich klicke auf den Button "Search" | Es wird eine Liste mit 4 Verbindungen ausgegeben die Morgen um 16:00 in Luzern abfahren| |
 
-**Vorbedingung**  Karte
+#### Karte
+
+**Vorbedingung**  Staionboard ist geöffnet & Internetverbindung
 
 **Anforderung** A006
 
@@ -293,7 +295,9 @@ while (x == y)
 | 1       | Ich gebe "Luzern" in die "Station" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
 | 2       | Ich klicke auf den Button "Show Map" | Es öffnet sich ein Browser Fenster mit Googlemaps. Luzern ist auf der Karte makiert |
 
-**Vorbedingung**  Mail
+#### Mail
+
+**Vorbedingung**  Verbindungssuche ist geöffnet  & Internetverbindung
 
 **Anforderung** A008
 
