@@ -237,8 +237,6 @@ while (x == y)
 | 2       | Ich gebe "luz" in die "From", "To" oder "Station" Textbox ein. | Es werden alle Haltestellen die mit Luzern anfgagen angezeigt |
 | 3       | Ich wähle das oberste Resultat aus | Der Stationsname wird in die Textbox eingefühlt |
 
-### Testfälle
-
 #### Verbindung suchen
 
 **Vorbedingung** Verbindungssuche ist geöffnet & Internetverbindung
@@ -266,7 +264,7 @@ while (x == y)
 | 1       | Ich gebe "Luzern" in die "Station" Textbox ein | Dropdown Menu schläg weiter Stationen vor die die Bezeichnung Luzern in Namen haben |
 | 2       | Ich klicke auf den Button "Search" | Es wird eine Liste mit den nächsten Verbindungen von Luzern in alle Richtungen angezeigt |
 
-#### Verbindung suchen
+#### Verbindung suchen mit Datum und Zeit
 
 **Vorbedingung** Staionboard ist geöffnet & Internetverbindung
 
